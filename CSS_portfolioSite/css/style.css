@@ -1,0 +1,213 @@
+body {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-color: rgba(0,0,0,1);
+ 	background-image: url("https://images.unsplash.com/photo-1554829399-6c2c3863cb46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80");
+	width: 960px;
+	margin: 0 auto;
+}
+
+h1 {
+	color: rgba(242,156,80,.7);
+	font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	background-color: rgba(14,14,14,0.6);
+	width: 960px;
+	height: 374px;
+	text-align: center;
+	padding: 10px;
+}
+
+.header, p{
+	color: rgba(191,161,143,1);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.headerInfo h4{
+	color: rgba(191,161,143,1);
+}
+
+.headerInfo, h4:hover{
+	color: rgba(2,89,89,.6);
+}
+
+.headerInfo {
+	display: flex;
+	flex-direction: row;
+}
+
+.infoLinkContainer {
+	display: flexbox;
+	justify-content: flex-start;
+	margin-right: 192px;
+}
+
+.infoLinks {
+	flex-direction: column;
+}
+
+.headshotContainer {
+	background-image: url("../images/CSS_headshot.png");
+	z-index: 1;
+	width: 320px;
+	height: 288px;
+	background-size: cover;
+	background-position: center;
+	margin-left: 192px;
+
+}
+
+.headshotContainer:hover {
+	border: 1px solid azure;
+}
+
+
+.aboutMe {
+	background-color: rgba(14,14,14,0.6);
+	color: rgba(242,156,80,1);
+	width: 960px;
+	height: 288px;
+	text-align: center;
+	padding: 10px;
+}
+
+.aboutMe p {
+	text-align: left;
+	justify-content: space-around;
+	margin-left: 96px;
+}
+
+.projects {
+	background-color: rgba(14,14,14,0.6);
+	width: 960px;
+	height: 288px;
+	text-align: center;
+	padding: 10px;	
+}
+
+#projectos {
+	background-color: rgba(14,14,14,0.6);
+	width: 960px;
+	height: 288px;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 50px;
+}
+
+.projects, h4 {
+	color: rgba(255,255,255,1);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.projectsContainer {
+	display: flex;
+}
+
+#project {
+	flex-direction: row;
+	width: 320px;
+	height: 200px;
+}
+
+#project:hover {
+	border: 1px solid azure;
+}
+
+.ss {
+	background-image: url("../images/ss.png");
+	background-size: cover;
+	background-position: center;
+	display: flexbox;
+}
+
+#project img {
+	background-size: cover;
+	background-position: center;
+}
+
+#cardContainer {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	display: flex;
+	min-width: 100%;
+	min-height: 200px;
+	overflow-x: auto;
+}
+
+#card--content {
+	background-color: rgba(14,14,14,.6);
+	min-width: 480px;
+	margin: 5px;
+}
+
+#card--content:hover {
+	border: 1px solid azure;
+}
+
+.card::-webkit-scrollbar {
+  	display: none;
+  	content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: center center;
+    opacity: .4;
+}
+
+#projectTitle {
+	text-align: center;
+}
+
+.ssCard {
+	background-image: url("../images/ss.png");
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+}
+
+.projectSubtitle {
+	margin-top: 144px;
+	animation: scroll;
+}
+
+.toolCard {
+	background-image: url("../images/toolshed.png");
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+}
+
+.latenightCard {
+	background-image: url("../images/latenightbytes.png");
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+}
+
+.footer {
+	background-color: rgba(191,161,143,.4);
+	display: flexbox;
+}
+
+.footer h4{
+	text-align: center;
+	color: rgba(2,89,89,1);
+}
