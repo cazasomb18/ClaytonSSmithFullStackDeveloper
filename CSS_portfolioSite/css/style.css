@@ -157,6 +157,7 @@ a {
 
 #card--content:hover {
 	border: 1px solid azure;
+	opacity: .7;
 }
 
 .card::-webkit-scrollbar {
