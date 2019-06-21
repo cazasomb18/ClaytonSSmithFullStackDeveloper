@@ -27,15 +27,20 @@ a {
 }
 
 .header, p{
-	color: rgba(191,161,143,1);
+	color: rgba(217,213,89, 1);
 	font-family: 'Montserrat', sans-serif;
 }
 
-.headerInfo h4{
-	color: rgba(191,161,143,1);
+.headerInfo h4, h2{
+	color: rgba(217,213,89, 1);
+	font-weight: 800px;
 }
 
 .headerInfo, h4:hover{
+	color: rgba(2,89,89,.6);
+}
+
+.headerInfo, h2:hover{
 	color: rgba(2,89,89,.6);
 }
 
@@ -52,6 +57,8 @@ a {
 
 .infoLinks {
 	flex-direction: column;
+	justify-content: flex-start;
+	/*font-weight: 800px;*/
 }
 
 .headshotContainer {
@@ -79,18 +86,12 @@ a {
 	padding: 10px;
 }
 
-.aboutMe p {
-	text-align: left;
-	justify-content: space-around;
-	margin-left: 96px;
-}
-
 .projects {
 	background-color: rgba(14,14,14,0.6);
 	width: 960px;
 	height: 288px;
 	text-align: center;
-	padding: 10px;	
+	padding: 10px;
 }
 
 #projectos {
@@ -147,6 +148,10 @@ a {
 	overflow-x: auto;
 }
 
+#SS-card-info {
+	margin-top: 25px;
+}
+
 .cardInfo--content {
 	min-width: 480px;
 	margin: 5px;
@@ -155,7 +160,8 @@ a {
 	margin: 0 0 auto;
 }
 
-.cardInfo--content p {
+.cardInfo--content p:hover {
+	color: rgba(242,156,80,1)
 }
 
 #cardContainer {
