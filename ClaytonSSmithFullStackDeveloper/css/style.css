@@ -50,14 +50,14 @@ a {
 }
 
 .infoLinkContainer {
-	display: flexbox;
-	justify-content: flex-start;
-	margin-right: 192px;
+/*	display: flexbox;*/
+/*	margin-right: 192px;*/
 }
 
 .infoLinks {
-	flex-direction: column;
-	justify-content: flex-start;
+	/*flex-direction: row;*/
+/*	flex-direction: column;*/
+/*	justify-content: center;*/
 	/*font-weight: 800px;*/
 }
 

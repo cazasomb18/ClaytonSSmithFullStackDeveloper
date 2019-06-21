@@ -1,0 +1,1 @@
+console.log('CLAYTON S. SMITH\'S PORTFOLIO SITE');
