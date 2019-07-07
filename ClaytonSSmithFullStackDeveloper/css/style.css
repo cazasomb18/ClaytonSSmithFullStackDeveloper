@@ -18,6 +18,15 @@ a {
 	text-decoration: none;
 }
 
+.navContainer {
+	background-color: rgba(14,14,14,0.6);
+	font-size: 16px;
+}
+
+.navContainer h1 {
+	font-size: 25px;
+}
+
 .header {
 	background-color: rgba(14,14,14,0.6);
 	width: 960px;
@@ -49,10 +58,10 @@ a {
 	flex-direction: row;
 }
 
-.infoLinkContainer {
-	/*display: flexbox;*/
-	/*margin-right: 192px;*/
-}
+/*.infoLinkContainer {
+	display: flexbox;
+	margin-right: 192px;
+}*/
 
 .infoLinks {
 	flex-direction: row;
