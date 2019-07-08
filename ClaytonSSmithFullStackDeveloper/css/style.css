@@ -1,6 +1,6 @@
 body {
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	/*background-attachment: fixed;*/
 	background-size: cover;
 	background-position: center;
 	background-color: rgba(0,0,0,1);
@@ -10,7 +10,6 @@ body {
 }
 
 h1 {
-	color: rgba(242,156,80,.7);
 	font-family: 'Montserrat Subrayada', sans-serif;
 }
 
@@ -18,13 +17,14 @@ a {
 	text-decoration: none;
 }
 
-.navContainer {
+#navbar-container {
 	background-color: rgba(14,14,14,0.6);
 	font-size: 16px;
 }
 
-.navContainer h1 {
-	font-size: 25px;
+#navbar-container h1 {
+	font-size: 26px;
+	color: rgba(242,156,80,.7);
 }
 
 .header {
@@ -35,21 +35,17 @@ a {
 	padding: 10px;
 }
 
-.header, p{
-	color: rgba(217,213,89, 1);
+.header, h5{
+	color: rgba(217,213,89,1);
 	font-family: 'Montserrat', sans-serif;
 }
 
-.headerInfo h4, h2{
-	color: rgba(217,213,89, 1);
+.headerInfo, h4, h2{
+	color: rgba(217,213,89,1);
 	font-weight: 800px;
 }
 
 .headerInfo, h4:hover{
-	color: rgba(2,89,89,.6);
-}
-
-.headerInfo, h2:hover{
 	color: rgba(2,89,89,.6);
 }
 
@@ -58,27 +54,14 @@ a {
 	flex-direction: row;
 }
 
-/*.infoLinkContainer {
-	display: flexbox;
-	margin-right: 192px;
-}*/
-
-.infoLinks {
-	flex-direction: row;
-	flex-direction: column;
-	justify-content: center;
-	font-weight: 800px;
-}
-
 .headshotContainer {
 	background-image: url("../images/CSS_headshot.png");
 	z-index: 1;
 	width: 320px;
-	height: 288px;
+	height: 320px;
 	background-size: cover;
 	background-position: center;
-	margin-left: 192px;
-
+	margin-left: 305px;
 }
 
 .headshotContainer:hover {
@@ -87,93 +70,58 @@ a {
 
 .aboutMeTitle {
 	text-align: center;
+	color: rgba(242,156,80,.7);
+}
+
+#about {
+	color: rgba(217,213,89,1);
+	font-family: 'Montserrat', sans-serif;
+	width: 960px;
+	height: 288px;
 }
 
 .aboutMe {
 	background-color: rgba(14,14,14,0.6);
-	color: rgba(242,156,80,1);
 	width: 960px;
 	height: 288px;
-	justify-content: space-between;
-	padding: 10px;
+	justify-content: flex-start;
+	padding: 20px;
 }
 
-.projects {
+#portfolio {
 	background-color: rgba(14,14,14,0.6);
+	color: rgba(242,156,80,.7);
 	width: 960px;
-	height: 288px;
+	height: 320px;
+	justify-content: flex-start;
 	text-align: center;
-	padding: 10px;
+	padding: 20px;
 }
 
-#projectos {
-	background-color: rgba(14,14,14,0.6);
-	width: 960px;
-	height: 288px;
-	text-align: center;
-}
-
-.projects, h4 {
+.project-info, h4 {
 	color: rgba(255,255,255,1);
 	font-family: 'Montserrat', sans-serif;
 }
 
-.projectsContainer {
-	display: flex;
-}
-
-#project {
-	flex-direction: row;
-	width: 320px;
-	height: 200px;
-}
-
-#project:hover {
-	border: 1px solid azure;
-}
-
-.ss {
+.ssCard {
 	background-image: url("../images/ss.png");
 	background-size: cover;
 	background-position: center;
 	display: flexbox;
 }
 
-#project img {
-	background-size: cover;
-	background-position: center;
-}
-
-#cardInfoContainer {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.cardInfo {
-	display: flex;
-	min-width: 100%;
-	min-height: 200px;
-	overflow-x: auto;
-}
-
-#SS-card-info {
-	margin-top: 25px;
-}
-
 .cardInfo--content {
 	min-width: 480px;
 	margin: 5px;
-	color: rgba(2,89,89,1);
 	text-align: justify;
 	margin: 0 0 auto;
 }
 
-.cardInfo--content p:hover {
-	color: rgba(242,156,80,1)
+#card--content {
+	background-color: rgba(14,14,14,.6);
+	min-width: 480px;
+	margin: 5px;
+	color: rgba(14,14,14,.7);
 }
 
 #cardContainer {
@@ -185,73 +133,62 @@ a {
 	align-items: center;
 }
 
-.card {
-	display: flex;
-	min-width: 100%;
-	min-height: 200px;
-	overflow-x: auto;
-}
-
-#card--content {
-	background-color: rgba(14,14,14,.6);
-	min-width: 480px;
-	margin: 5px;
-	color: rgba(14,14,14,.7);
-}
-
-#card--content:hover {
-	border: 1px solid azure;
-}
-
-.card::-webkit-scrollbar {
-  	display: none;
-  	content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: center center;
-    opacity: .5;
-}
-
-#projectTitle {
-	text-align: center;
-}
-
 .ssCard {
 	background-image: url("../images/ss.png");
+	height: 360px;
 	background-size: cover;
 	background-position: center;
 	margin: 0 auto;
 }
 
-.projectSubtitle {
-	margin-top: 128px;
-	animation: scroll;
+.ssCardText {
+	margin-bottom: 50px;
 }
 
 .toolCard {
 	background-image: url("../images/toolshed.png");
+	height: 360px;
 	background-size: cover;
 	background-position: center;
 	margin: 0 auto;
+}
+
+.cardText {
+	background-color: rgba(14,14,14,.6);
 }
 
 .latenightCard {
-	background-image: url("../images/latenightbytes.png");
+	background-image: url("../images/late-night-bytes.png");
+	height: 360px;
 	background-size: cover;
 	background-position: center;
 	margin: 0 auto;
 }
 
-.footer {
-	background-color: rgba(191,161,143,.4);
+#contact {
+	background-color: rgba(14,14,14,.6);
+	width: 960px;
+	height: 480px;
+	text-align: center;
+	color: rgba(242,156,80,.7);
+	padding-top: 188px;
+}
+
+.infoLinkContainer {
 	display: flexbox;
 }
 
-.footer h4{
+.infoLinks {
+	flex-direction: column;
+	justify-content: center;
+	font-weight: 800px;
+}
+
+.footer {
+	background-color: rgba(14,14,14,.6);
+	display: flexbox;
+}
+
+.footer h4 {
 	text-align: center;
-	color: rgba(2,89,89,1);
 }
