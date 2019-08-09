@@ -1,16 +1,36 @@
 body {
-	background-repeat: no-repeat;
+	box-sizing: border-box;
+	position: relative;
+	/*background-repeat: no-repeat;*/
 	/*background-attachment: fixed;*/
-	background-size: cover;
-	background-position: center;
-	background-color: rgba(0,0,0,1);
- 	background-image: url("https://images.unsplash.com/photo-1554829399-6c2c3863cb46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80");
-	width: 960px;
+	/*background-size: cover;
+	background-position: center;*/
+	background-color: rgba(14,14,14,.3);
+ 	/*background-image: url("https://images.unsplash.com/photo-1554829399-6c2c3863cb46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80");*/
+	width: 96rem;
 	margin: 0 auto;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.navbar-header {
+	height: 95vh;
+	/*box-shadow: 0 1.5rem 4rem;*/
+
+	background-image: linear-gradient(to right, rgba(53,166,166, 0.6), rgba(53,166,166, 0.6)), url("https://images.unsplash.com/photo-1554829399-6c2c3863cb46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80");
+
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 h1 {
 	font-family: 'Montserrat Subrayada', sans-serif;
+	font-size: 4rem;
 }
 
 a {
@@ -19,20 +39,20 @@ a {
 
 #navbar-container {
 	background-color: rgba(14,14,14,0.6);
-	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 #navbar-container h1 {
-	font-size: 26px;
+	font-size: 2.6rem;
 	color: rgba(242,156,80,.7);
 }
 
 .header {
 	background-color: rgba(14,14,14,0.6);
-	width: 960px;
-	height: 374px;
+	width: 96rem;
+	height: 37.4rem;
 	text-align: center;
-	padding: 10px;
+	padding: 1rem;
 }
 
 .header, h5{
@@ -42,7 +62,7 @@ a {
 
 .headerInfo, h4, h2{
 	color: rgba(217,213,89,1);
-	font-weight: 800px;
+	font-weight: 800;
 }
 
 .headerInfo, h4:hover{
@@ -57,11 +77,11 @@ a {
 .headshotContainer {
 	background-image: url("../images/CSS_headshot.png");
 	z-index: 1;
-	width: 320px;
-	height: 320px;
+	width: 32rem;
+	height: 32rem;
 	background-size: cover;
 	background-position: center;
-	margin-left: 305px;
+	margin-left: 30.5rem;
 }
 
 .headshotContainer:hover {
@@ -76,26 +96,26 @@ a {
 #about {
 	color: rgba(217,213,89,1);
 	font-family: 'Montserrat', sans-serif;
-	width: 960px;
-	height: 288px;
+	width: 96rem;
+	height: 28.8rem;
 }
 
 .aboutMe {
 	background-color: rgba(14,14,14,0.6);
-	width: 960px;
-	height: 288px;
+	width: 96rem;
+	height: 28.8rem;
 	justify-content: flex-start;
-	padding: 20px;
+	padding: 2rem;
 }
 
 #portfolio {
 	background-color: rgba(14,14,14,0.6);
 	color: rgba(242,156,80,.7);
-	width: 960px;
-	height: 320px;
+	width: 96rem;
+	height: 32rem;
 	justify-content: flex-start;
 	text-align: center;
-	padding: 20px;
+	padding: 2rem;
 }
 
 .project-info, h4 {
@@ -111,16 +131,16 @@ a {
 }
 
 .cardInfo--content {
-	min-width: 480px;
-	margin: 5px;
+	min-width: 48rem;
+	margin: .5rem;
 	text-align: justify;
 	margin: 0 0 auto;
 }
 
 #card--content {
 	background-color: rgba(14,14,14,.6);
-	min-width: 480px;
-	margin: 5px;
+	min-width: 48rem;
+	margin: .5rem;
 	color: rgba(14,14,14,.7);
 }
 
@@ -135,19 +155,19 @@ a {
 
 .ssCard {
 	background-image: url("../images/ss.png");
-	height: 360px;
+	height: 36rem;
 	background-size: cover;
 	background-position: center;
 	margin: 0 auto;
 }
 
 .ssCardText {
-	margin-bottom: 50px;
+	margin-bottom: 5rem;
 }
 
 .toolCard {
 	background-image: url("../images/toolshed.png");
-	height: 360px;
+	height: 36rem;
 	background-size: cover;
 	background-position: center;
 	margin: 0 auto;
@@ -159,7 +179,7 @@ a {
 
 .latenightCard {
 	background-image: url("../images/late-night-bytes.png");
-	height: 360px;
+	height: 36rem;
 	background-size: cover;
 	background-position: center;
 	margin: 0 auto;
@@ -167,11 +187,11 @@ a {
 
 #contact {
 	background-color: rgba(14,14,14,.6);
-	width: 960px;
-	height: 480px;
+	width: 96rem;
+	height: 48rem;
 	text-align: center;
 	color: rgba(242,156,80,.7);
-	padding-top: 188px;
+	padding-top: 18.8rem;
 }
 
 .infoLinkContainer {
@@ -181,7 +201,7 @@ a {
 .infoLinks {
 	flex-direction: column;
 	justify-content: center;
-	font-weight: 800px;
+	font-weight: 800;
 }
 
 .footer {
