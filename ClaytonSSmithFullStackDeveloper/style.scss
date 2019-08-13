@@ -1,0 +1,244 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: rgba(14,14,14,.3);
+	width: 96rem;
+	margin: 0 auto;
+}
+
+body::before,
+body::after {
+  content:"";
+  position:absolute;
+  left:0;
+  width:100%;
+}
+
+h1 {
+	font-family: 'Montserrat Subrayada', sans-serif;
+	font-size: 4rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+.row {
+	width: 96rem;
+	margin: 0 auto;
+}
+
+.col-1-of-3 {
+	width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+}
+
+.navbar-header {
+	height: 95vh;
+	margin-top: 3rem;
+	margin: 3rem 0;
+	box-shadow: 0 1.5rem 4rem;
+
+	background-image: linear-gradient(to right bottom, rgba(37,115,115,0.8), rgba(53,166,166,0.8)), url("https://images.unsplash.com/photo-1554829399-6c2c3863cb46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80");
+
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+}
+
+#app-title {
+	font-size: 50rem;
+}
+
+#navbar-container {
+	font-size: 1.6rem;
+}
+
+#navbar-container h1 {
+	font-size: 2.6rem;
+	color: rgba(242,156,80,1);
+}
+
+.header {
+	width: 96rem;
+	height: 37.4rem;
+	text-align: center;
+	padding: 1rem;
+}
+
+.header, h5{
+	color: rgba(242,156,80,1);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.headshotContainer {
+	background-image: url("../images/CSS_headshot.png");
+	z-index: 1;
+	width: 32rem;
+	height: 32rem;
+	background-size: cover;
+	background-position: center;
+	margin-left: 30.5rem;
+}
+
+.headshotContainer:hover {
+	border: 1px solid azure;
+}
+
+.aboutMe-container {
+
+}
+
+.aboutMeTitle {
+	text-align: center;
+	color: rgba(242,156,80,1);
+	margin: 2rem 0;
+}
+
+#about {
+	height: 95vh;
+	color: rgba(2,89,89,1);
+	font-family: 'Montserrat', sans-serif;
+	width: 96rem;
+	margin: 2rem 0;
+}
+
+.aboutMe {
+	width: 96rem;
+	height: 28.8rem;
+	background-image: linear-gradient(to right bottom, rgba(37,115,115,0.8), rgba(53,166,166,0.8)), url("https://images.unsplash.com/photo-1500313976989-0c3c7ffc8f62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+
+	background-size: cover;
+	background-position: top;
+	position: relative;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+
+	justify-content: flex-start;
+	padding: 5rem 0;
+}
+
+.aboutMe h5 {
+	font-size: 1.8rem;
+	color: rgba(242,156,80,1);
+	line-height: 2.5rem;
+	letter-spacing: .3rem;
+	margin: 1rem 2.5rem;
+	padding: 2rem;
+}
+
+#portfolio {
+	background-color: rgba(14,14,14,0.6);
+	color: rgba(242,156,80,1);
+	width: 96rem;
+	height: 32rem;
+	justify-content: flex-start;
+	text-align: center;
+	padding: 2rem;
+}
+
+.project-info, h4 {
+	color: rgba(255,255,255,1);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.ssCard {
+	background-image: url("../images/ss.png");
+	background-size: cover;
+	background-position: center;
+	display: flexbox;
+}
+
+.cardInfo--content {
+	min-width: 48rem;
+	margin: .5rem;
+	text-align: justify;
+	margin: 0 0 auto;
+}
+
+.carousel-item p {
+	font-size: 2rem;
+}
+
+.carousel-caption h4 {
+	font-size: 3rem;
+}
+
+#cardContainer {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ssCard {
+	background-image: url("../images/ss.png");
+	height: 36rem;
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+}
+
+.ssCardText {
+	margin-bottom: 5rem;
+}
+
+.toolCard {
+	background-image: url("../images/toolshed.png");
+	height: 36rem;
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+}
+
+.cardText {
+	background-color: rgba(14,14,14,.6);
+}
+
+.latenightCard {
+	background-image: url("../images/late-night-bytes.png");
+	height: 36rem;
+	background-size: cover;
+	background-position: center;
+	margin: 0 auto;
+}
+
+#contact {
+	background-color: rgba(14,14,14,.6);
+	width: 96rem;
+	height: 48rem;
+	text-align: center;
+	color: rgba(242,156,80,1);
+	padding-top: 18.8rem;
+}
+
+.infoLinkContainer {
+	display: flexbox;
+}
+
+.infoLinkContainer h2 a {
+	font-size: 3rem;
+}
+
+.infoLinks {
+	flex-direction: column;
+	justify-content: center;
+	font-weight: 800;
+}
+
+.footer {
+	background-color: rgba(14,14,14,.6);
+	display: flexbox;
+	margin: 2rem 0;
+}
+
+.footer h4 {
+	text-align: center;
+	font-size: 2rem;
+}

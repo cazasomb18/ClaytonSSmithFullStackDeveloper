@@ -7,8 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+
 	<link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
@@ -17,7 +16,7 @@
 	<section class="navbar-header">
 	 	<div id="navbar-container">
 			<nav class="navbar navbar-dark navbar-expand-sm bg-transparent">
-				<h1 class="navbar-brand headerTitle">CLAYTON S. SMITH: FULLSTACK DEVELOPER</h1>
+				<h1 id="app-title" class="navbar-brand headerTitle">CLAYTON S. SMITH: FULLSTACK DEVELOPER</h1>
 				<button class="navbar-toggler mr-auto">
 					<span class="navbar-toggler-icon" data-toggle="collapse" data-target="#navbarMenu"></span>
 				</button>
@@ -46,100 +45,138 @@
 	</section>
 
 
+	<section class="aboutMe-container">	
+		<div id="about" class="aboutMe">
+			<h1 class="aboutMeTitle">ABOUT ME</h1>
+			<h5>Graduate and fellow of General Assembly's first ever Software Engineering Cohort with over 500 hours in-class instruction plus hundreds of hours self-study.</h5>
+			<h5>Skilled in JavaScript, HTML5, CSS3, Node.js, Express, React.js and hungry for more. I have built multiple full-stack applications with the aim of using web-based technology to solve everyday problems. </h5>
+			<h5>I'm highly enthusiastic about team work, communication and sharing approaches to problem solving. Let's build something GREAT together.</h5>
+		</div>
+	</section>
 
-	<div id="about" class="aboutMe">
-		<h1 class="aboutMeTitle">ABOUT ME</h1>
-		<br/>
-		<h5>Graduate and fellow of General Assembly's first ever Software Engineering Cohort with over 500 hours of instruction and plus hundreds of hours of hours self-study. Skilled in JavaScript, HTML5, CSS, Node.js, Express, React.js and hungry for more. I have built multiple full-stack applications with the aim of using web-based technology to solve everyday problems. I'm highly enthusiastic about team work, communication and sharing approaches to problem solving. Let's build something GREAT together.</h5>
-	</div>
-
-	<div id="portfolio" class="carousel" data-ride="carousel">
-		<!-- ADD CLASS 'slide' TO ABOVE DIV FOR ANIMATION EFFECT-->
-		<!-- CSS styling was making it look kinda wonky -->
-		<h1>PORTFOLIO</h1>
-
-		<br/>
+	<section id="portfolio" class="card-group">
 
 		<div>
-			<!-- carousel indicators -->
-			<div id="carouselCaptions container-fluid" class="carousel slide" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselCaptions" data-slide-to="1"></li>
-					<li data-target="#carouselCaptions" data-slide-to="2"></li>
-				</ol>
-				<div id="container-fluid" class="carousel-inner">
-					<!-- carousel Slideshow -->
-					<div class="carousel-item active ssCard cardInfo--content">
-						<div class="carousel-caption d-none d-md-block ssCardText">
-		  					<a href="https://cazasomb18.github.io/Scintillating-Sequences/">
-								<h4 class="projectSubtitle">Scintillating Sequences</h4>
-							</a>
-							<p>Scintillating Sequences is 2 player memory game built with HTML5, jQuery, JS and CSS. Each player takes turns using keystrokes to replicate a randomized pattern that appears on the UI. The more rounds you complete the harder it gets to complete the sequence.</p>
-						</div>
-					</div>
-
-					<div class="carousel-item toolCard cardInfo--content">
-						<div class="carousel-caption d-none d-md-block">
-							<div class="cardText">
-							  	<a href="https://toolshed-matton.herokuapp.com/auth/login">
-			  						<h4 class="projectSubtitle">Tool Shed</h4>
-			  					</a>
-								<p>ToolShed is a full stack application built using Express, Node, and EJS pages. The aim of the project was to gain confidence with RESTful routing while delivering CRUD capability. This crowd sourced platform enables users to Create and account, load photos, and post descriptions of their tools available for loan. Users an also post comments on other posted tools as well as edit and delete their own comments and/or tool posting(s). The function of ToolShed is to create a crowd-sourced solution for lending and borrowing power tools geared towards those living in urban areas.</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="carousel-item latenightCard cardInfo--content">
-						<div class="carousel-caption d-none d-md-block">
-							<div class="cardText">
-								<a href="https://late-night-bytes.herokuapp.com">
-									<h4 class="projectSubtitle">Late Night Bytes</h4>
-				  				</a>
-								<p>Late Night Bytes is a MERN stack fully decoupled application which consumes 2 APIs, implements geolocation based search results and presents full crud functionality to users. Users who login are automatically shown a list of nearest "late night restaurants" as well as a marker placed on the google maps feature for each respective search result.  You can even tell how close you are to the restaurants returned from the google-places API query due to the different marker icons.</p>
-								
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
+			<h1>PORTFOLIO</h1>
 		</div>
 
-		<!-- left and right controls -->
+	    <div class="row">
+	        <div class="col-1-of-3">
+	            <div class="project-card">
+	                <div class="project-card__side project-card__side--front">
+	                    <div class="project-card__picture project-card__picture--1">
+	                        &nbsp;
+	                    </div>
+	                    <h4 class="project-card__heading project-card__heading project-card__heading--1">
+	                        <span class="project-card__heading-span project-card__heading-span--1">Scintillating Sequences</span>
+	                    </h4>
+	                    <div class="project-card__details">
+	                        <ul>
+	                            <li>Scintillating Sequences is a 2 player memory game built with HTML5, jQuery, JavaScript and CSS3</li>
+	                            <br>
+	                            <li>Each player takes turns using keystrokes to replicate a randomized pattern that appears on the UI.</li>
+	                            <br>
+	                            <li>The more rounds you complete the harder it gets to complete the sequence.</li>
+	                        </ul>
+	                    </div>
+	                </div>
+	                <div class="project-card__side project-card__side--back project-card__side--back-1">
+	                    <div class="project-card__cta">
+	                        <div class="project-card__info-box">
+	                            <p class="project-card__back-title">Scintillating Sequences</p>
+	                        </div>
+	                        <a href="https://github.com/cazasomb18/Scintillating-Sequences" class="btn btn--white">GITHUB</a>
+	                        <a href="https://cazasomb18.github.io/Scintillating-Sequences/" class="btn btn--white">Play Game</a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="col-1-of-3">
+	        	<div class="project-card">
+	                <div class="project-card__side project-card__side--front">
+	                    <div class="project-card__picture project-card__picture--2">
+	                        &nbsp;
+	                    </div>
+	                    <h4 class="project-card__heading">
+	                        <span class="project-card__heading-span project-card__heading-span--2">ToolShed</span>
+	                    </h4>
+	                    <div class="project-card__details">
+	                        <ul>
+	                            <li>ToolShed is a full stack application built using Mongoose, Express, Node, and EJS pages. The aim of the project was to gain confidence with RESTful routing while delivering CRUD capability.</li><li>This app enables users to create an account, load photos, and post descriptions of their tools available for loan. Users can also post comments on other posts as well as edit/delete their own comments/posting(s).</li><li>The goal of ToolShed is to create a crowd-sourced solution for lending and borrowing power tools geared towards those living in urban areas.</li>
+	                        </ul>
+	                    </div>
+	                </div>
+	                <div class="project-card__side project-card__side--back project-card__side--back-2">
+	                    <div class="project-card__cta">
+	                        <div class="project-card__info-box">
+	                            <p class="project-card__back-title">ToolShed</p>
+	                        </div>
+	                        <a href="https://github.com/naomatheus/tool-shed" class="btn btn--white">GITHUB</a>
+	                        <a href="https://toolshed-matton.herokuapp.com/auth/register" class="btn btn--white">POST TOOLS</a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
 
-		<a class="carousel-control-prev" href="#portfolio" data-slide="prev">
-			<span class="carousel-control-prev-icon"></span>
-		</a>
-		<a class="carousel-control-next" href="#portfolio" data-slide="next">
-			<span class="carousel-control-next-icon"></span>
-		</a>
-	</div>
+
+	        <div class="col-1-of-3">
+	        	<div class="project-card">
+	                <div class="project-card__side project-card__side--front">
+	                    <div class="project-card__picture project-card__picture--3">
+	                        &nbsp;
+	                    </div>
+	                    <h4 class="project-card__heading">
+	                        <span class="project-card__heading-span project-card__heading-span--3">Late Night Bytes</span>
+	                    </h4>
+	                    <div class="project-card__details">
+	                        <ul>
+	                            <li>Late Night Bytes is a MERN stack fully decoupled application which consumes 2 APIs, implements geolocation based search results and presents full CRUD functionality to users.</li>
+	                            <li>Users who login are automatically shown a list of nearest "late night restaurants" as well as a marker placed on the google maps feature for each respective search result.</li>
+	                            <li>You can even tell how close you are to the restaurants returned from the google-places API query due to the different marker icons.</li>
+	                        </ul>
+	                    </div>
+	                </div>
+	                <div class="project-card__side project-card__side--back project-card__side--back-3">
+	                    <div class="project-card__cta">
+	                        <div class="project-card__info-box">
+	                            <p class="project-card__back-title">Late Night Bytes</p>
+	                        </div>
+	                        <a href="https://github.com/cazasomb18/LateNight-react-client-app" class="btn btn--white">GITHUB: Front-End</a>
+	                        <a href="https://github.com/cazasomb18/LateNight-express-back-end" class="btn btn--white">GITHUB: Back-End</a>
+	                        <a href="https://late-night-bytes.herokuapp.com/" class="btn btn--white">FIND FOOD</a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+		
+	</section>
+
 
 	<div id="contact">
 
-		<h1>CONTACT INFORMATION</h1>
-
-		<br/>
+		<h1>CONTACT</h1>
 
 		<div class="infoLinkContainer">
-			<h2>(765) 977-6279</h2>
-
 			<a href="mailto: claytonschoonoversmith@gmail.com">
 				<div class="infoLinks">
-					<h4>claytonschoonoversmith@gmail.com</h4>
+					<h4 class="text-white">claytonschoonoversmith@gmail.com</h4>
 				</div>
 			</a>
 
+			<div class="infoLinks">
+				<h4 class="text-white">(765) 977-6279</h2>
+			</div>
+
 			<a href="https://www.linkedin.com/in/clayton-schoonover-smith/">
 				<div class="infoLinks">
-					<h4>LinkedIn</h4>
+					<h4 class="text-white">LinkedIn</h4>
 				</div>
 			</a>
 
 			<a href="https://github.com/cazasomb18/">
 				<div class="infoLinks">
-					<h4>Github</h4>
+					<h4 class="text-white">Github</h4>
 				</div>
 			</a>
 
@@ -148,7 +185,7 @@
 	</div>
 
 	<div class="footer">
-		<h4 class="text-white">© 2019 CLAYTON S. SMITH</h4>
+		<h4 class="text-black">&copy; 2019 CLAYTON S. SMITH</h4>
 	</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
