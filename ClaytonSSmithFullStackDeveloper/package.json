@@ -1,0 +1,23 @@
+{
+  "name": "claytonssmithfullstackdeveloper",
+  "version": "1.0.0",
+  "description": "Portfolio site for Clayton Smith",
+  "main": "index.js",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "devserver": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cazasomb18/cazasomb18.github.io.git"
+  },
+  "author": "Clayton Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cazasomb18/cazasomb18.github.io/issues"
+  },
+  "homepage": "https://cazasomb18.github.io/ClaytonSSmithFullStackDeveloper/"
+}

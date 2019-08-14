@@ -17,7 +17,7 @@
 	 	<div id="navbar-container">
 			<nav class="navbar navbar-dark navbar-expand-sm bg-transparent">
 				<h1 id="app-title" class="navbar-brand headerTitle">CLAYTON S. SMITH: FULLSTACK DEVELOPER</h1>
-				<button class="navbar-toggler mr-auto">
+				<button class="navbar-toggler navbar-light mr-auto">
 					<span class="navbar-toggler-icon" data-toggle="collapse" data-target="#navbarMenu"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarMenu">
@@ -38,118 +38,133 @@
 	 	</div>
 
 		<div class="header">
-			<div class="headshotContainer img-fluid">
+			<a href="#about">
+				<div class="headshotContainer img-fluid">
 
-			</div>
+				</div>
+			</a>
 		</div>
 	</section>
 
 
 	<section class="aboutMe-container">	
 		<div id="about" class="aboutMe">
-			<h1 class="aboutMeTitle">ABOUT ME</h1>
+			<h1 class="aboutMe-title">ABOUT ME</h1>
 			<h5>Graduate and fellow of General Assembly's first ever Software Engineering Cohort with over 500 hours in-class instruction plus hundreds of hours self-study.</h5>
 			<h5>Skilled in JavaScript, HTML5, CSS3, Node.js, Express, React.js and hungry for more. I have built multiple full-stack applications with the aim of using web-based technology to solve everyday problems. </h5>
 			<h5>I'm highly enthusiastic about team work, communication and sharing approaches to problem solving. Let's build something GREAT together.</h5>
 		</div>
 	</section>
 
-	<section id="portfolio" class="card-group">
+	<section class="card-group-container">
+		<div id="portfolio" class="card-group">
+			<h1 class="portfolo-title">PORTFOLIO</h1>
 
-		<div>
-			<h1>PORTFOLIO</h1>
+		    <div class="row">
+
+		        <div class="col-1-of-3">
+		            <div class="project-card">
+
+		                <div class="project-card__side project-card__side--front">
+		                    <div class="project-card__picture project-card__picture--1">
+		                        &nbsp;
+		                    </div>
+		                    <h4 class="project-card__heading project-card__heading--1">
+		                        <span class="project-card__heading-span project-card__heading-span--1">Scintillating Sequences</span>
+		                    </h4>
+		                    <div class="project-card__details">
+		                        <ul>
+		                            <li>Scintillating Sequences is a 2 player memory game built with HTML5, jQuery, JavaScript and CSS3</li>
+		                            <br>
+		                            <li>Each player takes turns using keystrokes to replicate a randomized pattern that appears on the UI</li>
+		                            <br>
+		                            <li>The more rounds you complete the harder it gets to complete the sequence</li>
+		                        </ul>
+		                    </div>
+		                </div>
+
+		                <div class="project-card__side project-card__side--back project-card__side--back-1">
+		                    <div class="project-card__cta">
+		                        <div class="project-card__info-box">
+		                            <p class="project-card__back-title--1">Scintillating Sequences</p>
+		                        </div>
+		                        <a href="https://github.com/cazasomb18/Scintillating-Sequences" class="project-card__gh">GITHUB</a>
+		                        <a href="https://cazasomb18.github.io/Scintillating-Sequences/" class="btn btn--white">Play Game</a>
+		                    </div>
+		                </div>
+
+		            </div>
+		        </div>
+
+		        <div class="col-1-of-3">
+		        	<div class="project-card">
+
+		                <div class="project-card__side project-card__side--front">
+		                    <div class="project-card__picture project-card__picture--2">
+		                        &nbsp;
+		                    </div>
+		                    <h4 class="project-card__heading">
+		                        <span class="project-card__heading-span project-card__heading-span--2">ToolShed</span>
+		                    </h4>
+		                    <div class="project-card__details">
+		                        <ul>
+		                            <li>ToolShed is a full stack application built using Mongoose, Express, Node, and EJS pages</li>
+		                            <li>Enables users to create an account, load photos and post descriptions of their tools available for loan. Users can also post comments on other posts and edit/delete their own comments/posts</li>
+		                            <li>The goal of ToolShed is to create a crowd-sourced solution for ubran dwellers looking to lend and borrow power tools</li>
+		                        </ul>
+		                    </div>
+		                </div>
+
+		                <div class="project-card__side project-card__side--back project-card__side--back-2">
+		                    <div class="project-card__cta">
+		                        <div class="project-card__info-box">
+		                            <p class="project-card__back-title">Tool Shed</p>
+		                        </div>
+		                        <a href="https://github.com/naomatheus/tool-shed" class="project-card__gh">GITHUB</a>
+		                        <a href="https://toolshed-matton.herokuapp.com/auth/register" class="btn btn--white">POST TOOLS</a>
+		                    </div>
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <div class="col-1-of-3">
+		        	<div class="project-card">
+
+		                <div class="project-card__side project-card__side--front">
+		                    <div class="project-card__picture project-card__picture--3">
+		                        &nbsp;
+		                    </div>
+		                    <h4 class="project-card__heading">
+		                        <span class="project-card__heading-span project-card__heading-span--3">Late Night Bytes</span>
+		                    </h4>
+		                    <div class="project-card__details">
+		                        <ul>
+		                            <li>Late Night Bytes is a MERN stack fully decoupled application which consumes 2 APIs, implements geolocation based search results and presents full CRUD functionality to users</li>
+		                            <li>Users who login are automatically shown a list of nearest "late night restaurants" based on their current location</li>
+		                            <li>Users can tell how close they are to the restaurants due to the different marker icons</li>
+		                        </ul>
+		                    </div>
+		                </div>
+
+		                <div class="project-card__side project-card__side--back project-card__side--back-3">
+		                    <div class="project-card__cta">
+		                        <div class="project-card__info-box">
+		                            <p class="project-card__back-title">Late Night Bytes</p>
+		                        </div>
+		                        <a href="https://github.com/cazasomb18/LateNight-react-client-app" class="project-card__gh">GITHUB: Front</a>
+		                        <a href="https://github.com/cazasomb18/LateNight-express-back-end" class="project-card__gh">GITHUB: Back</a>
+		                        <a href="https://late-night-bytes.herokuapp.com/" class="btn btn--white">FIND FOOD</a>
+		                    </div>
+		                </div>
+
+		            </div>
+		        </div>
+
+	        </div>
+
 		</div>
-
-	    <div class="row">
-	        <div class="col-1-of-3">
-	            <div class="project-card">
-	                <div class="project-card__side project-card__side--front">
-	                    <div class="project-card__picture project-card__picture--1">
-	                        &nbsp;
-	                    </div>
-	                    <h4 class="project-card__heading project-card__heading project-card__heading--1">
-	                        <span class="project-card__heading-span project-card__heading-span--1">Scintillating Sequences</span>
-	                    </h4>
-	                    <div class="project-card__details">
-	                        <ul>
-	                            <li>Scintillating Sequences is a 2 player memory game built with HTML5, jQuery, JavaScript and CSS3</li>
-	                            <br>
-	                            <li>Each player takes turns using keystrokes to replicate a randomized pattern that appears on the UI.</li>
-	                            <br>
-	                            <li>The more rounds you complete the harder it gets to complete the sequence.</li>
-	                        </ul>
-	                    </div>
-	                </div>
-	                <div class="project-card__side project-card__side--back project-card__side--back-1">
-	                    <div class="project-card__cta">
-	                        <div class="project-card__info-box">
-	                            <p class="project-card__back-title">Scintillating Sequences</p>
-	                        </div>
-	                        <a href="https://github.com/cazasomb18/Scintillating-Sequences" class="btn btn--white">GITHUB</a>
-	                        <a href="https://cazasomb18.github.io/Scintillating-Sequences/" class="btn btn--white">Play Game</a>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	        <div class="col-1-of-3">
-	        	<div class="project-card">
-	                <div class="project-card__side project-card__side--front">
-	                    <div class="project-card__picture project-card__picture--2">
-	                        &nbsp;
-	                    </div>
-	                    <h4 class="project-card__heading">
-	                        <span class="project-card__heading-span project-card__heading-span--2">ToolShed</span>
-	                    </h4>
-	                    <div class="project-card__details">
-	                        <ul>
-	                            <li>ToolShed is a full stack application built using Mongoose, Express, Node, and EJS pages. The aim of the project was to gain confidence with RESTful routing while delivering CRUD capability.</li><li>This app enables users to create an account, load photos, and post descriptions of their tools available for loan. Users can also post comments on other posts as well as edit/delete their own comments/posting(s).</li><li>The goal of ToolShed is to create a crowd-sourced solution for lending and borrowing power tools geared towards those living in urban areas.</li>
-	                        </ul>
-	                    </div>
-	                </div>
-	                <div class="project-card__side project-card__side--back project-card__side--back-2">
-	                    <div class="project-card__cta">
-	                        <div class="project-card__info-box">
-	                            <p class="project-card__back-title">ToolShed</p>
-	                        </div>
-	                        <a href="https://github.com/naomatheus/tool-shed" class="btn btn--white">GITHUB</a>
-	                        <a href="https://toolshed-matton.herokuapp.com/auth/register" class="btn btn--white">POST TOOLS</a>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-
-
-	        <div class="col-1-of-3">
-	        	<div class="project-card">
-	                <div class="project-card__side project-card__side--front">
-	                    <div class="project-card__picture project-card__picture--3">
-	                        &nbsp;
-	                    </div>
-	                    <h4 class="project-card__heading">
-	                        <span class="project-card__heading-span project-card__heading-span--3">Late Night Bytes</span>
-	                    </h4>
-	                    <div class="project-card__details">
-	                        <ul>
-	                            <li>Late Night Bytes is a MERN stack fully decoupled application which consumes 2 APIs, implements geolocation based search results and presents full CRUD functionality to users.</li>
-	                            <li>Users who login are automatically shown a list of nearest "late night restaurants" as well as a marker placed on the google maps feature for each respective search result.</li>
-	                            <li>You can even tell how close you are to the restaurants returned from the google-places API query due to the different marker icons.</li>
-	                        </ul>
-	                    </div>
-	                </div>
-	                <div class="project-card__side project-card__side--back project-card__side--back-3">
-	                    <div class="project-card__cta">
-	                        <div class="project-card__info-box">
-	                            <p class="project-card__back-title">Late Night Bytes</p>
-	                        </div>
-	                        <a href="https://github.com/cazasomb18/LateNight-react-client-app" class="btn btn--white">GITHUB: Front-End</a>
-	                        <a href="https://github.com/cazasomb18/LateNight-express-back-end" class="btn btn--white">GITHUB: Back-End</a>
-	                        <a href="https://late-night-bytes.herokuapp.com/" class="btn btn--white">FIND FOOD</a>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-        </div>
-		
 	</section>
 
 
