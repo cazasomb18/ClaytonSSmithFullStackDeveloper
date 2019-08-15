@@ -2,15 +2,26 @@ html {
 	font-size: 62.5%;
 	border-top: 1rem solid #fff;
 	border-right: 1rem solid #fff;
-	border-left: 1rem solid #fff;
-}
+	border-left: 1rem solid #fff; }
 
+	@media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+
+}
+/*html @include respond(tab-land) { 
+	width < 1200?
+		font-size: 56.25%;  
+		1 rem = 9px, 9/16 === 56.25%
+}*/
 body {
 	box-sizing: border-box;
 	background-color: linear-gradient: rgba(14,14,14,.3), rgba(14,14,14,.6);
 	min-width: 96rem;
 	margin: 0 auto;
 	padding: 1rem 1rem 0 1rem;
+
+
 }
 
 body::before,
@@ -149,9 +160,10 @@ a {
 }
 
 .aboutMe-title {
-	text-align: center;
+	font-size: 5rem;
+	text-align: left;
 	color: rgba(242,156,80,1);
-	margin: 2rem 2rem 0;
+	margin: 2rem;
 }
 
 #about {
@@ -188,14 +200,18 @@ a {
 	padding: 2rem;
 }
 
-.portfolo-title {
-	color: rgba(242,156,80,1);
-	margin: 2rem 2rem 0;
-}
 
 .card-group-container {
-	padding: 25rem 0 15rem 0;
+	padding: 25rem 0 10rem 0;
 	margin-top: -20rem;
+	text-align: center;
+}
+
+.portfolo-title {
+	color: rgba(242,156,80,1);
+	margin: 2rem;
+	text-align: center;
+	font-size: 5rem;
 }
 
 .card-group {
@@ -213,7 +229,7 @@ a {
 	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 83.35% 95%, 66.7% 100%, 50% 95%, 33.3% 100%, 16.65% 95%, 0 100%);
 	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 83.35% 95%, 66.7% 100%, 50% 95%, 33.3% 100%, 16.65% 95%, 0 100%);
 
-	justify-content: space-around;
+	justify-content: space-between;
 	padding: 5rem 0;
 }
 
@@ -244,14 +260,8 @@ a {
 #portfolio {
 	height: 110vh;
 	min-width: 96rem;
-	/*color: rgba(2,89,89,1);*/
 	font-family: 'Montserrat', sans-serif;
 }
-
-/*#portfolio h1 {
-	color: rgba(242,156,80,1);
-	margin: 2rem 2rem 0;
-}*/
 
 .project-card {
 	perspective: 150rem;
@@ -334,7 +344,6 @@ a {
 	box-decoration-break: clone;
 }
 
-
 .project-card__heading-span--1 {
 	background-image: linear-gradient(to right bottom, #56ab2f, #a8e063);
 }
@@ -378,8 +387,9 @@ a {
 
 .project-card__details ul {
 	list-style: none;
-	width: 95%;
+	width: 90%;
 	margin: 0 auto;
+	margin-left: -2rem;
 	padding-top: 1.5rem;
 }
 
@@ -436,6 +446,77 @@ a {
 	color: #eee;
 }
 
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+
+	.card-group-container {
+		margin-top: 2rem;
+		padding: 10rem 0 10rem 0;
+	}
+	.card-group {
+		align-content: start;
+		margin: 2rem 0;
+		height: auto;
+		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+	}
+	.portfolo-title {
+		height: 4rem;
+		margin: 1rem 0;
+	}
+    .project-card {
+    	height: ;
+	  	border-radius: 3px;
+	  	background-color: #fff;
+	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
+    }
+    .project-card__side {
+	    -webkit-backface-visibility: initial;
+		backface-visibility: initial;
+	    height: auto;
+	    position: relative;
+	    box-shadow: none;
+
+	}
+    .project-card__side--back {
+		transform: rotateY(0);
+    	transform: translateY(.5rem);
+		-webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%); 
+	}
+	.project-card__side--back-2 {
+		transform: translateY(-2rem);
+	}
+  	.project-card:hover .card__side--front {
+        transform: rotateY(0); 
+    }
+  	.project-card__details ul {
+        padding-left: 2rem;
+    }
+  	.project-card__cta {
+	    position: relative;
+	    top: 0;
+	    left: 0;
+	    transform: translate(0);
+	}
+    .project-card__info-box {
+        margin-bottom: 2rem;
+    }
+    .project-card__gh {
+        font-size: 2.5rem;
+    }
+
+    .project-card__gh--3 {
+    	font-size: 2.2rem;
+    }
+    .project-card__back-title {
+    	display: none;
+    }
+
+    .project-card__back-title--1 {
+    	display: none;	
+    }
+}
+
 
 #contact {
 	background-color: rgba(14,14,14,.6);
@@ -458,9 +539,9 @@ a {
 }
 
 #contact h1 {
-	font-size: 4rem;
-	margin-bottom: 2rem;
-	margin-top: 4rem;
+	font-size: 5rem;
+	margin-bottom: 3rem;
+	margin-top: 1rem;
 }
 
 .infoLinkContainer {
@@ -470,7 +551,7 @@ a {
 .infoLinks {
 	flex-direction: column;
 	justify-content: center;
-	letter-spacing: 2px;
+	letter-spacing: 2.5px;
 }
 
 .infoLinks h4 {
@@ -482,8 +563,10 @@ a {
 }
 
 .infoLinks h4:hover {
-	text-decoration: none;
-	color: #eee;
+	text-decoration: none;;
+	color: #fff;
+	transform: translateY(-.5rem);
+	transform: scale(1.1);
 }
 
 .footer {
