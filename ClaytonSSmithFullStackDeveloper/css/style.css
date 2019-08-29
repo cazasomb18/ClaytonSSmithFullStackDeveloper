@@ -1,28 +1,52 @@
+/* 
+0-600px:		Phone 
+600-900px: 		Tablet portrait
+900-1200px: 	Tablet landscape
+*/
+
 html {
 	font-size: 62.5%;
 	border-top: 1rem solid #fff;
 	border-right: 1rem solid #fff;
-	border-left: 1rem solid #fff; }
+	border-left: 1rem solid #fff;
+}
 
 	@media only screen and (max-width: 75em) {
     html {
-      font-size: 56.25%; } }
+      font-size: 56.25%; } } /* width < 1200px, 1 rem = 9px/9/16===56.25%*/
 
+    @media only screen and (max-width: 56.25em) {
+	html {
+		font-size: 50%; } } /*width < 900px, 1rem = 8px/8/16===50%*/
+
+	@media only screen and (max-width: 37.5em) {/*width < 600px, 1rem = 7px/16=43.75%*/
+	html {
+		font-size: 43.75%; } }
 }
-/*html @include respond(tab-land) { 
-	width < 1200?
-		font-size: 56.25%;  
-		1 rem = 9px, 9/16 === 56.25%
-}*/
+
 body {
 	box-sizing: border-box;
-	background-color: linear-gradient: rgba(14,14,14,.3), rgba(14,14,14,.6);
-	min-width: 96rem;
+	/*background-image: linear-gradient(to right bottom, #fff, #000);*/
+	max-width: 100%;
 	margin: 0 auto;
-	padding: 1rem 1rem 0 1rem;
+	padding: 1rem 1rem 0 1rem;}
+
+	@media only screen and (max-width: 75em) {
+	body {
+		padding: 0;
+		max-width: 100%; } }
+
+	@media only screen and (max-width: 56.25em) {
+	body {
+		padding: 0;
+		max-width: 100%; } }
+
+	@media only screen and (max-width: 37.5em) {
+	body {
+		padding: 0;
+		max-width: 100%;  } }
 
 
-}
 
 body::before,
 body::after {
@@ -132,9 +156,9 @@ a {
 	padding: 1rem;
 }
 
-.header, h5{
-	color: rgba(242,156,80,1);
-	font-family: 'Montserrat', sans-serif;
+.header__a {
+	overflow: hidden;
+	position: relative;
 }
 
 .headshotContainer {
@@ -146,6 +170,7 @@ a {
 	background-position: center;
 	margin: 0 auto;
 	opacity: .95;
+	border-radius: 6px;
 }
 
 .headshotContainer:hover {
@@ -154,24 +179,17 @@ a {
 	opacity: 1;
 }
 
-.aboutMe-container {
-	padding: 25rem 0 15rem 0;
-	margin-top: -20rem;
-}
-
-.aboutMe-title {
-	font-size: 5rem;
-	text-align: left;
-	color: rgba(242,156,80,1);
-	margin: 2rem;
-}
-
 #about {
 	height: 95vh;
 	min-width: 96rem;
 	color: rgba(2,89,89,1);
 	font-family: 'Montserrat', sans-serif;
 	/*margin: 2rem 0;*/
+}
+
+.aboutMe-container {
+	padding: 25rem 0 15rem 0;
+	margin-top: -27.5rem;
 }
 
 .aboutMe {
@@ -184,15 +202,24 @@ a {
 	background-size: cover;
 	background-position: top;
 	/*position: relative;*/
-	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 80vh);
-	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 80vh);
+	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
+	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
 
 	/*justify-content: flex-start;*/
 	padding: 5rem 0 0 0;
-	margin-bottom: -10rem;
+	margin-bottom: -25rem;
 }
 
-.aboutMe h5 {
+.aboutMe-title {
+	font-size: 5rem;
+	color: rgba(242,156,80,1);
+	text-align: left;
+	margin: 2rem;
+}
+
+.aboutMe-text {
+	color: rgba(242,156,80,1);
+	font-family: 'Montserrat', sans-serif;
 	font-size: 1.8rem;
 	line-height: 2.5rem;
 	letter-spacing: .3rem;
@@ -200,10 +227,9 @@ a {
 	padding: 2rem;
 }
 
-
 .card-group-container {
 	padding: 25rem 0 10rem 0;
-	margin-top: -20rem;
+	margin-top: -15rem;
 	text-align: center;
 }
 
@@ -216,8 +242,8 @@ a {
 
 .card-group {
 	min-width: 96rem;
-	padding: 15rem 0 15rem 0;
-	margin: 5rem 0 15rem 0;
+	padding: 15rem 0;
+	margin: 5rem 0;
 	background-image: linear-gradient(to right bottom, 
 		rgba(15,32,39,.75), rgba(32,58,67,.75),
 		rgba(44,83,100,.75)),
@@ -249,12 +275,15 @@ a {
 	float: left;
 	width: calc((100% - 6rem) / 3);
 	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
 }
 
 .col-1-of-3::after {
 	content: "";
 	display: table;
 	clear: both;
+	/*overflow: hidden;*/
 }
 
 #portfolio {
@@ -385,7 +414,7 @@ a {
 	padding: .5rem;
 }
 
-.project-card__details ul {
+.project-card__details-ul {
 	list-style: none;
 	width: 90%;
 	margin: 0 auto;
@@ -393,7 +422,7 @@ a {
 	padding-top: 1.5rem;
 }
 
-.project-card__details li {
+.project-card__details-li {
 	text-align: left;
 	font-size: 1.2rem;
 }
@@ -408,7 +437,6 @@ a {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
-	/*display: flex;*/
 	text-align: center;
 }
 
@@ -446,75 +474,109 @@ a {
 	color: #eee;
 }
 
+/*TAB PORT MEDIA QUERY*/
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
 
 	.card-group-container {
-		margin-top: 2rem;
-		padding: 10rem 0 10rem 0;
-	}
+		margin: 2rem 0;
+		padding: 2rem 0; }
+
 	.card-group {
 		align-content: start;
-		margin: 2rem 0;
-		height: auto;
+		margin: 4rem 0;
+		margin-top: 3rem;
 		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-	}
+		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);}
+
 	.portfolo-title {
 		height: 4rem;
-		margin: 1rem 0;
-	}
+		margin: 1rem 2rem;}
+
     .project-card {
-    	height: ;
+    	position: relative;
+	  	overflow: hidden;
+    	margin: 4rem 0;
+    	height: 52rem;
 	  	border-radius: 3px;
 	  	background-color: #fff;
-	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
-    }
+	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+
     .project-card__side {
 	    -webkit-backface-visibility: initial;
 		backface-visibility: initial;
 	    height: auto;
 	    position: relative;
-	    box-shadow: none;
+	    overflow: hidden;
+	    box-shadow: none;}
 
+	.project-card__details-ul {
+		margin-left: 1.5rem;
 	}
+
     .project-card__side--back {
 		transform: rotateY(0);
-    	transform: translateY(.5rem);
 		-webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
-		clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%); 
-	}
+		clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+		overflow: hidden; }
+
+	.project-card__side--back-1 {
+		transform: translateY(-1.3rem); }
+
 	.project-card__side--back-2 {
-		transform: translateY(-2rem);
-	}
+		transform: translateY(-2rem); }
+
   	.project-card:hover .card__side--front {
-        transform: rotateY(0); 
-    }
-  	.project-card__details ul {
-        padding-left: 2rem;
-    }
+        transform: rotateY(0); }
+
+  	.project-card__details-ul {
+        padding-left: 2rem; }
+
   	.project-card__cta {
+	    display: flex;
+	    flex-direction: column;
+	    align-content: flex-end;
+	    width: 100%;
 	    position: relative;
 	    top: 0;
 	    left: 0;
-	    transform: translate(0);
-	}
+	    transform: translateY(-1rem); }
+
     .project-card__info-box {
-        margin-bottom: 2rem;
-    }
+        margin: -3rem 0; }
+
     .project-card__gh {
-        font-size: 2.5rem;
-    }
+        font-size: 2.5rem; }
 
     .project-card__gh--3 {
-    	font-size: 2.2rem;
-    }
+    	font-size: 2.2rem; }
+
     .project-card__back-title {
-    	display: none;
-    }
+    	display: none; }
 
     .project-card__back-title--1 {
-    	display: none;	
+    	display: none; }
+    .btn--white {
+    	align-self: center; }
+}
+
+
+/*PHONE MEDIA QUERY*/
+@media only screen and (max-width: 37.5em), only screen and (hover: none) {
+	.project-card__info-box {
+        margin-bottom: 5.6rem;
     }
+
+    .project-card__side--back-1 {
+    	margin-top: 1.6rem;
+    }
+
+	.project-card__side--back-2 {
+		margin-top: 5.5rem;
+	}
+
+	.project-card__side--back-3 {
+		margin-top: 2.4rem;
+	}
 }
 
 
@@ -538,43 +600,58 @@ a {
 	clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
 }
 
-#contact h1 {
+.contact__heading {
 	font-size: 5rem;
 	margin-bottom: 3rem;
 	margin-top: 1rem;
 }
 
-.infoLinkContainer {
-	display: flexbox;
-}
-
 .infoLinks {
 	flex-direction: column;
 	justify-content: center;
-	letter-spacing: 2.5px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2.3px;
 }
 
-.infoLinks h4 {
-	color: #fff;
-	text-transform: uppercase;
+.infoLinks__a {
+	text-decoration: none;
 	margin: auto;
 	font-size: 2.5rem;
 	line-height: 2;
 }
 
-.infoLinks h4:hover {
-	text-decoration: none;;
+.infoLinks:hover {
+	text-decoration: none;
 	color: #fff;
 	transform: translateY(-.5rem);
 	transform: scale(1.1);
+	letter-spacing: 2.5px;
+	font-weight: 500;
+	box-shadow: 0 2rem 5rem rgba(0,0,0,.3);
+}
+
+.infoLinks__icon {
+	height: 2rem;
+	width: 2rem;
+	margin-bottom: 6px;
+	fill: #eee;
 }
 
 .footer {
-	display: flexbox;
-	margin: 3rem 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 3rem 0;
 }
 
-.footer h4 {
-	text-align: center;
+	@media only screen and (max-width: 37.5em) {
+	.footer h4 {
+		align-self: center;
+		margin-left: 32.5rem;
+	}
+
+.footer__text {
 	font-size: 2rem;
 }
