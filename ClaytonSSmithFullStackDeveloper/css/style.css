@@ -159,6 +159,7 @@ a {
 .header__a {
 	overflow: hidden;
 	position: relative;
+	padding-bottom: 3rem;
 }
 
 .headshotContainer {
@@ -211,11 +212,11 @@ a {
 	font-size: 6rem;
 	color: rgba(242,156,80,1);
 	text-align: center;
-	margin-top: 2rem;
+	padding-top: 4rem;
 }
 
 .aboutMe-title:hover {
-	transform: skewX(-10deg) scale(1.1);
+	transform: skewX(-10deg) skewY(-1deg) scale(1.1);
 	transition: all .2s;
 }
 
@@ -243,7 +244,7 @@ a {
 }
 
 .portfolio-title:hover {
-	transform: skewX(-10deg) scale(1.1);
+	transform: skewX(-10deg) skewY(-1deg) scale(1.1);
 	transition: all .2s;
 }
 
@@ -567,20 +568,32 @@ a {
 
 /*PHONE MEDIA QUERY*/
 @media only screen and (max-width: 37.5em), only screen and (hover: none) {
+
+	.navbar-header {
+		padding-bottom: 6rem;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
+	}
+
+	.aboutMe {
+		margin: 2rem 0;
+		padding: 2rem 0;
+	}
+
 	.project-card__info-box {
         margin-bottom: 5.6rem;
     }
 
     .project-card__side--back-1 {
-    	margin-top: 1.6rem;
+    	margin-top: 6rem;
     }
 
 	.project-card__side--back-2 {
-		margin-top: 5.5rem;
+		margin-top: 6.6rem;
 	}
 
 	.project-card__side--back-3 {
-		margin-top: 2.4rem;
+		margin-top: 4.2rem;
 	}
 }
 
@@ -613,7 +626,7 @@ a {
 }
 
 .contact__heading:hover{
-	transform: skewX(-10deg) scale(1.1);
+	transform: skewX(-10deg) skewY(-1deg) scale(1.1);
 	transition: all .2s;
 }
 
@@ -652,18 +665,10 @@ a {
 
 .footer {
 	display: flex;
-	justify-content: center;
-	width: 100%;
-	margin: 3rem 0;
-}
-
-@media only screen and (max-width: 37.5em) {
-	.footer h4 {
-		align-self: center;
-		margin-left: 32.5rem;
-	}
+	min-width: 96rem;
 }
 
 .footer__text {
+	margin: 3rem auto;
 	font-size: 1.8rem;
 }
