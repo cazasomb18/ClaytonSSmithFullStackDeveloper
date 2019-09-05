@@ -643,15 +643,21 @@ a {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	padding: 3rem 0;
+	margin: 3rem 0;
 }
 
-	@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
 	.footer h4 {
 		align-self: center;
 		margin-left: 32.5rem;
 	}
+}
 
 .footer__text {
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
+
+/*.footer__text:hover {
+	transform: scale(1.05);
+	transform: translateY(-0.5rem);
+}*/
