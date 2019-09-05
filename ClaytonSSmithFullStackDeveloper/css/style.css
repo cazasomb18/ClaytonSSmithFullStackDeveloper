@@ -182,14 +182,11 @@ a {
 #about {
 	height: 95vh;
 	min-width: 96rem;
-	color: rgba(2,89,89,1);
 	font-family: 'Montserrat', sans-serif;
-	/*margin: 2rem 0;*/
 }
 
 .aboutMe-container {
-	padding: 25rem 0 15rem 0;
-	margin-top: -27.5rem;
+	padding-bottom: -5rem;
 }
 
 .aboutMe {
@@ -201,20 +198,25 @@ a {
 
 	background-size: cover;
 	background-position: top;
-	/*position: relative;*/
-	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
-	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
 
-	/*justify-content: flex-start;*/
-	padding: 5rem 0 0 0;
+	position: relative;
+	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 90vh);
+	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 90vh);
+
+	padding-top: 6rem;
 	margin-bottom: -25rem;
 }
 
 .aboutMe-title {
-	font-size: 5rem;
+	font-size: 6rem;
 	color: rgba(242,156,80,1);
-	text-align: left;
-	margin: 2rem;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.aboutMe-title:hover {
+	transform: skewX(-10deg) scale(1.1);
+	transition: all .2s;
 }
 
 .aboutMe-text {
@@ -222,28 +224,33 @@ a {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.8rem;
 	line-height: 2.5rem;
-	letter-spacing: .3rem;
+	letter-spacing: 3px;
 	margin: 1rem 2.5rem;
-	padding: 2rem;
+	padding-top: 2rem;
 }
 
 .card-group-container {
-	padding: 25rem 0 10rem 0;
-	margin-top: -15rem;
+	padding: 30rem 0 10rem 0;
 	text-align: center;
+	transform: translateY(-3rem);
 }
 
-.portfolo-title {
-	color: rgba(242,156,80,1);
-	margin: 2rem;
+.portfolio-title {
+	font-size: 6rem;
 	text-align: center;
-	font-size: 5rem;
+	color: rgba(242,156,80,1);
+	margin-top: -2rem;
+}
+
+.portfolio-title:hover {
+	transform: skewX(-10deg) scale(1.1);
+	transition: all .2s;
 }
 
 .card-group {
 	min-width: 96rem;
 	padding: 15rem 0;
-	margin: 5rem 0;
+	/*margin: 3rem 0;*/
 	background-image: linear-gradient(to right bottom, 
 		rgba(15,32,39,.75), rgba(32,58,67,.75),
 		rgba(44,83,100,.75)),
@@ -255,14 +262,12 @@ a {
 	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 83.35% 95%, 66.7% 100%, 50% 95%, 33.3% 100%, 16.65% 95%, 0 100%);
 	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 83.35% 95%, 66.7% 100%, 50% 95%, 33.3% 100%, 16.65% 95%, 0 100%);
 
-	justify-content: space-between;
-	padding: 5rem 0;
+	justify-content: space-around;
 }
 
 .row {
-	max-width: 116rem;
-	min-width: 96rem;
-	margin: 0 auto;
+	min-width: 100rem;
+	margin: auto;
 }
 
 .row::after {
@@ -490,7 +495,7 @@ a {
 
 	.portfolo-title {
 		height: 4rem;
-		margin: 1rem 2rem;}
+		margin: 1rem 2rem; }
 
     .project-card {
     	position: relative;
@@ -601,9 +606,15 @@ a {
 }
 
 .contact__heading {
-	font-size: 5rem;
+	font-size: 6rem;
+	color: rgba(242,156,80,1);
 	margin-bottom: 3rem;
 	margin-top: 1rem;
+}
+
+.contact__heading:hover{
+	transform: skewX(-10deg) scale(1.1);
+	transition: all .2s;
 }
 
 .infoLinks {
@@ -656,8 +667,3 @@ a {
 .footer__text {
 	font-size: 1.8rem;
 }
-
-/*.footer__text:hover {
-	transform: scale(1.05);
-	transform: translateY(-0.5rem);
-}*/
