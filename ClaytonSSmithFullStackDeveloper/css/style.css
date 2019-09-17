@@ -17,7 +17,7 @@ html {
 
     @media only screen and (max-width: 56.25em) {
 	html {
-		font-size: 50%; } } /*width < 900px, 1rem = 8px/8/16===50%*/
+		font-size: 50%; } } /*width < 900px, 1rem = 7px/7/16===50%*/
 
 	@media only screen and (max-width: 37.5em) {/*width < 600px, 1rem = 7px/16=43.75%*/
 	html {
@@ -34,19 +34,20 @@ body {
 	@media only screen and (max-width: 75em) {
 	body {
 		padding: 0;
-		max-width: 100%; } }
+		max-width: 100%; 
+	} }
 
 	@media only screen and (max-width: 56.25em) {
 	body {
 		padding: 0;
-		max-width: 100%; } }
+		max-width: 100%; 
+	} }
 
 	@media only screen and (max-width: 37.5em) {
 	body {
 		padding: 0;
-		max-width: 100%;  } }
-
-
+		max-width: 100%;  
+	} }
 
 body::before,
 body::after {
@@ -112,6 +113,11 @@ a {
  	transition: all .4s; 
 }
 
+#navbar-container {
+	display: flex;
+	justify-content: center;
+}
+
 .navbar-header {
 	height: 95vh;
 	min-width: 96rem;
@@ -129,6 +135,7 @@ a {
 	position: relative;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+
 }
 
 #app-title {
@@ -159,7 +166,7 @@ a {
 .header__a {
 	overflow: hidden;
 	position: relative;
-	padding-bottom: 3rem;
+	padding-bottom: 1rem;
 }
 
 .headshotContainer {
@@ -181,6 +188,8 @@ a {
 }
 
 #about {
+	display: relative;
+	overflow: hidden;
 	height: 95vh;
 	min-width: 96rem;
 	font-family: 'Montserrat', sans-serif;
@@ -201,8 +210,8 @@ a {
 	background-position: top;
 
 	position: relative;
-	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 90vh);
-	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 90vh);
+	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
+	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
 
 	padding-top: 6rem;
 	margin-bottom: -25rem;
@@ -251,7 +260,7 @@ a {
 .card-group {
 	min-width: 96rem;
 	padding: 15rem 0;
-	/*margin: 3rem 0;*/
+	margin: 2rem 0;
 	background-image: linear-gradient(to right bottom, 
 		rgba(15,32,39,.75), rgba(32,58,67,.75),
 		rgba(44,83,100,.75)),
@@ -269,6 +278,8 @@ a {
 .row {
 	min-width: 100rem;
 	margin: auto;
+/*	display: relative;
+	overflow: hidden;*/
 }
 
 .row::after {
@@ -281,15 +292,13 @@ a {
 	float: left;
 	width: calc((100% - 6rem) / 3);
 	margin: 0 auto;
-	position: relative;
-	overflow: hidden;
 }
 
 .col-1-of-3::after {
 	content: "";
 	display: table;
 	clear: both;
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 #portfolio {
@@ -363,14 +372,7 @@ a {
 .project-card__heading--1 {
 	line-height: 3.5rem;
 	font-size: 2.5rem;
-	font-weight: 300;
-	text-transform: uppercase;
-	text-align: right;
-	color: #eee;
-	position: absolute;
-	top: 12rem;
 	right: 3rem;
-	width: 60%;
 }
 
 .project-card__heading-span {
@@ -423,7 +425,6 @@ a {
 .project-card__details-ul {
 	list-style: none;
 	width: 90%;
-	margin: 0 auto;
 	margin-left: -2rem;
 	padding-top: 1.5rem;
 }
@@ -480,62 +481,66 @@ a {
 	color: #eee;
 }
 
-/*TAB PORT MEDIA QUERY*/
-@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+/*TAB LAND MEDIA QUERY*/
+@media only screen and (max-width: 75em), only screen and (hover: none) {
 
 	.card-group-container {
 		margin: 2rem 0;
-		padding: 2rem 0; }
+	}
 
 	.card-group {
 		align-content: start;
-		margin: 4rem 0;
-		margin-top: 3rem;
+		margin: 3rem 0;
 		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);}
+		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+	}
 
-	.portfolo-title {
-		height: 4rem;
-		margin: 1rem 2rem; }
-
-    .project-card {
+	.project-card {
     	position: relative;
 	  	overflow: hidden;
     	margin: 4rem 0;
-    	height: 52rem;
+    	height: auto;
 	  	border-radius: 3px;
 	  	background-color: #fff;
-	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  	}
 
-    .project-card__side {
+  	.project-card__side {
 	    -webkit-backface-visibility: initial;
 		backface-visibility: initial;
 	    height: auto;
 	    position: relative;
 	    overflow: hidden;
-	    box-shadow: none;}
-
-	.project-card__details-ul {
-		margin-left: 1.5rem;
+	    box-shadow: none;
+	    position: relative;
+	  	overflow: hidden;
 	}
 
-    .project-card__side--back {
+	.project-card__details-ul {
+		margin-bottom: -2rem;
+	}
+
+	.project-card__details-ul--1 {
+		margin-bottom: -1rem;
+		margin-top: -2rem;
+	}
+
+	.project-card__side--back {
 		transform: rotateY(0);
 		-webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
 		clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
-		overflow: hidden; }
+		position: relative;
+		overflow: hidden;
+		top: -5rem;
+	}
 
-	.project-card__side--back-1 {
-		transform: translateY(-1.3rem); }
-
-	.project-card__side--back-2 {
-		transform: translateY(-2rem); }
-
-  	.project-card:hover .card__side--front {
-        transform: rotateY(0); }
+	.project-card:hover .card__side--front {
+        transform: rotateY(0); 
+    }
 
   	.project-card__details-ul {
-        padding-left: 2rem; }
+        padding-left: 2rem; 
+    }
 
   	.project-card__cta {
 	    display: flex;
@@ -545,24 +550,142 @@ a {
 	    position: relative;
 	    top: 0;
 	    left: 0;
-	    transform: translateY(-1rem); }
+	}
 
     .project-card__info-box {
-        margin: -3rem 0; }
+        margin: -3rem 0;
+    }
 
     .project-card__gh {
-        font-size: 2.5rem; }
+        font-size: 2.5rem; 
+    }
 
     .project-card__gh--3 {
-    	font-size: 2.2rem; }
+    	font-size: 2.2rem; 
+    }
 
     .project-card__back-title {
-    	display: none; }
+    	display: none; 
+    }
 
     .project-card__back-title--1 {
-    	display: none; }
+    	display: none; 
+    }
     .btn--white {
-    	align-self: center; }
+    	align-self: center; 
+    }
+}
+
+/*TAB PORT MEDIA QUERY*/
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+	.nav-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.card-group-container {
+		margin: 2rem 0;
+		padding: 2rem 0; 
+	}
+
+	.card-group {
+		align-content: start;
+		margin: 4rem 0;
+		margin-top: 3rem;
+		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+	}
+
+    .project-card {
+    	position: relative;
+	  	overflow: hidden;
+    	margin: 4rem 0;
+    	height: 52rem;
+	  	border-radius: 3px;
+	  	background-color: #fff;
+	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
+	}
+
+    .project-card__side {
+    	position: relative;
+	    overflow: hidden;
+	    -webkit-backface-visibility: initial;
+		backface-visibility: initial;
+	    height: auto;
+	    box-shadow: none;
+	}
+
+	.project-card__details-ul--1 {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	.project-card__details-ul {
+		margin-bottom: 0;
+		margin-left: .5rem;
+	}
+
+    .project-card__side--back {
+		transform: rotateY(0);
+		-webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+		overflow: hidden; 
+	}
+
+	.project-card__side--back-1 {
+		transform: translateY(-9.5rem); 
+	}
+
+	.project-card__side--back-2 {
+		transform: translateY(-2rem); 
+	}
+
+	.project-card__side--back-3 {
+		transform: translateY(-0.75rem);
+	}
+
+  	.project-card:hover .card__side--front {
+        transform: rotateY(0); 
+    }
+
+  	.project-card__cta {
+	    display: flex;
+	    flex-direction: column;
+	    align-content: flex-end;
+	    width: 100%;
+	    position: relative;
+	    top: 0;
+	    left: 0;
+	    transform: translateY(-1rem);
+	}
+
+    .project-card__info-box {
+        margin: -3rem 0;
+    }
+
+    .project-card__gh {
+        font-size: 2.5rem; 
+    }
+
+    .project-card__gh--3 {
+    	font-size: 2.2rem; 
+    }
+
+    .project-card__back-title {
+    	display: none; 
+    }
+
+    .project-card__back-title--1 {
+    	display: none; 
+    }
+
+    .btn--white {
+    	align-self: center; 
+    }
+
+    .text-white {
+    	letter-spacing: 1.5px;
+    }
 }
 
 
@@ -581,19 +704,19 @@ a {
 	}
 
 	.project-card__info-box {
-        margin-bottom: 5.6rem;
+        margin-bottom: 7.5rem;
     }
 
     .project-card__side--back-1 {
-    	margin-top: 6rem;
+    	top: 15rem;
     }
 
 	.project-card__side--back-2 {
-		margin-top: 6.6rem;
+		top: 4.75rem;
 	}
 
 	.project-card__side--back-3 {
-		margin-top: 4.2rem;
+		top: 3rem;
 	}
 }
 
@@ -614,8 +737,8 @@ a {
 	background-size: cover;
 	background-position: top;
 	position: relative;
-	-webkit-clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
-	clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
+	-webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
 .contact__heading {
