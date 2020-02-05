@@ -15,14 +15,14 @@
 	<title>CLAYTON S. SMITH: FULLSTACK DEVELOPER</title>
 </head>
 <body>
-	<section class="navbar-header">
-	 	<div id="navbar-container" class="nav-container">
-			<nav class="navbar navbar-dark navbar-expand-xl bg-transparent">
-				<h1 id="app-title" class="navbar-brand headerTitle">CLAYTON S. SMITH: FULLSTACK DEVELOPER</h1>
-				<button class="navbar-toggler navbar-light mr-auto">
-					<span class="navbar-toggler-icon" data-toggle="collapse" data-target="#navbarMenu"></span>
+	<section class="navbar-header" id="navbar-header">
+	 	<div id="navbar-container">
+			<nav class="navbar navbar-dark navbar-expand-xl bg-transparent flex-wrap">
+				<h1 id="app-title" class="navbar-brand">CLAYTON S. SMITH: FULLSTACK DEVELOPER</h1>
+				<button class="navbar-toggler navbar-light mr-auto text-center" type="button" data-toggle="collapse" data-target="#navbarMenu">
+					<span class="navbar-toggler-icon" data-toggle="collapse"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarMenu">
+				<div class="collapse navbar-collapse text-center ml-auto" id="navbarMenu">
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<a href="#about" class="nav-link header__a">ABOUT ME</a>
@@ -34,39 +34,39 @@
 							<a href="#contact" class="nav-link header__a">CONTACT</a>
 						</li>
 					</ul>
-				</div class="collapse navbar-collapse">
+				</div>
 			</nav>
 	 	</div>
 
 		<div class="header">
 			<a href="#about">
-				<div class="headshotContainer img-fluid">
+				<div class="headshotContainer">
 
 				</div>
 			</a>
 		</div>
+
 	</section>
 
 
-	<section class="aboutMe-container">	
-		<div id="about" class="aboutMe">
+	<section id="about" class="aboutMe">
+		<div class="aboutMe-content">
 			<h1 class="aboutMe-title">ABOUT ME</h1>
-			<h5 class="aboutMe-text">Graduate and fellow of General Assembly's first ever Software Engineering Cohort with over 500 hours in-class instruction plus hundreds of hours self-study.</h5>
-			<h5 class="aboutMe-text">Skilled in JavaScript, HTML5, CSS3, Node.js, Express, React.js and hungry for more. I have built multiple full-stack applications with the aim of using web-based technology to solve everyday problems. </h5>
-			<h5 class="aboutMe-text">I'm highly enthusiastic about team work, communication and sharing approaches to problem solving. Let's build something GREAT together.</h5>
+			<h5 class="aboutMe-text">Graduate and fellow of General Assembly's first ever Software Engineering Cohort with 500+ hours of professional instruction, that yielded a jQuery-based memory game and 2 deployed full-stack applications.</h5>
+			<h5 class="aboutMe-text">Skilled in JavaScript, HTML5, CSS3, Python, NodeJS, ExpressJS, ReactJS and always looking to sharpen existing skills and applying them in new contexts. The full-stack applications I have built all aim at using web-based technology to solve everyday problems. </h5>
+			<h5 class="aboutMe-text">I like to stay busy and enjoy learning new things - I'm currently working on learning React Native and React with Redux. I am highly enthusiastic about team work, communication and sharing approaches to problem solving. Let's build something GREAT together.</h5>
 		</div>
 	</section>
 
 	<section class="card-group-container">
 		<div id="portfolio" class="card-group">
+
 			<h1 class="portfolio-title">PORTFOLIO</h1>
 
 		    <div class="row">
 
 		        <div class="col-1-of-3">
-
 		            <div class="project-card">
-
 		                <div class="project-card__side project-card__side--front">
 		                    <div class="project-card__picture project-card__picture--1">
 		                        &nbsp;
@@ -75,15 +75,15 @@
 		                        <span class="project-card__heading-span project-card__heading-span--1">Scintillating Sequences</span>
 		                    </h4>
 		                    <div class="project-card__details">
-		                        <ul class="project-card__details-ul project-card__details-ul--1">
-		                            <li class="project-card__details-li">Scintillating Sequences is a 2 player memory game built with HTML5, jQuery, JavaScript and CSS3</li>
-		                            <li class="project-card__details-li">Each player takes turns using keystrokes to replicate a randomized pattern that appears on the UI</li>
-		                            <li class="project-card__details-li">The more rounds you complete the harder it gets to complete the sequence</li>
+		                        <ul>
+		                            <li>Scintillating Sequences is a 2 player memory game built with HTML5, jQuery, JavaScript and CSS3</li>
+		                            <li>Each player takes turns using keystrokes to replicate a randomized pattern that appears on the UI</li>
+		                            <li>The more rounds you complete the harder it gets to complete the sequence</li>
 		                        </ul>
 		                    </div>
 		                </div>
 
-		                <div class="project-card__side project-card__side--back project-card__side--back-1">
+		                <div id="project-card__back--1" class="project-card__side project-card__side--back project-card__side--back-1">
 		                    <div class="project-card__cta">
 		                        <div class="project-card__info-box">
 		                            <p class="project-card__back-title--1">Scintillating Sequences</p>
@@ -92,14 +92,11 @@
 		                        <a href="https://cazasomb18.github.io/Scintillating-Sequences/" class="btn btn--white">Play Game</a>
 		                    </div>
 		                </div>
-
 		            </div>
 		        </div>
 
 		        <div class="col-1-of-3">
-
 		        	<div class="project-card">
-
 		                <div class="project-card__side project-card__side--front">
 		                    <div class="project-card__picture project-card__picture--2">
 		                        &nbsp;
@@ -108,10 +105,10 @@
 		                        <span class="project-card__heading-span project-card__heading-span--2">ToolShed</span>
 		                    </h4>
 		                    <div class="project-card__details">
-		                        <ul class="project-card__details-ul">
-		                            <li class="project-card__details-li">ToolShed is a full stack application built using Mongoose, Express, Node, and EJS pages</li>
-		                            <li class="project-card__details-li">Users can load photos and post descriptions of their tools available for loan. Users can also post comments on other posts and edit/delete their own comments/posts</li>
-		                            <li class="project-card__details-li">ToolShed is a crowd-sourced solution for ubran dwellers looking to lend and borrow power tools</li>
+		                        <ul>
+		                            <li>ToolShed is a full stack application built using Mongoose, Express, Node, and EJS pages</li>
+		                            <li>Users can create posts of tools available, post comments on other posts, and  edit/delete their own posts/commments</li>
+		                            <li>ToolShed is a crowd-sourced solution for urbanites looking to borrow tools</li>
 		                        </ul>
 		                    </div>
 		                </div>
@@ -125,15 +122,12 @@
 		                        <a href="https://toolshed-matton.herokuapp.com/auth/register" class="btn btn--white">POST TOOLS</a>
 		                    </div>
 		                </div>
-
 		            </div>
 		        </div>
 
 
 		        <div class="col-1-of-3">
-
 		        	<div class="project-card">
-
 		                <div class="project-card__side project-card__side--front">
 		                    <div class="project-card__picture project-card__picture--3">
 		                        &nbsp;
@@ -142,36 +136,34 @@
 		                        <span class="project-card__heading-span project-card__heading-span--3">Late Night Bytes</span>
 		                    </h4>
 		                    <div class="project-card__details">
-		                        <ul class="project-card__details-ul">
-		                            <li class="project-card__details-li">Late Night Bytes is a MERN stack fully decoupled application which consumes 2 APIs, implements geolocation based search results and presents full CRUD functionality to users</li>
-		                            <li class="project-card__details-li">Users who login are automatically shown a list of nearest "late night restaurants" based on their current location</li>
+		                        <ul>
+		                            <li>Late Night Bytes is a MERN stack fully decoupled application which consumes 2 APIs, implements geolocation based search results and presents full CRUD functionality to users</li>
+		                            <li>Users who login are automatically shown a list of nearest "late night restaurants" based on their current location</li>
 		                        </ul>
 		                    </div>
 		                </div>
 
-		                <div class="project-card__side project-card__side--back project-card__side--back-3 project-card__side--back-tab-land">
+		                <div class="project-card__side project-card__side--back project-card__side--back-3">
 		                    <div class="project-card__cta">
 		                        <div class="project-card__info-box">
 		                            <p class="project-card__back-title">Late Night Bytes</p>
 		                        </div>
-		                        <a href="https://github.com/cazasomb18/LateNight-react-client-app" class="project-card__gh project-card__gh--3">GITHUB: Front</a>
-		                        <a href="https://github.com/cazasomb18/LateNight-express-back-end" class="project-card__gh project-card__gh--3">GITHUB: Back</a>
+		                        <a href="https://github.com/cazasomb18/LateNight-react-client-app" id="project-card__gh--3" class="text-white">GITHUB: Front</a>
+		                        <a href="https://github.com/cazasomb18/LateNight-express-back-end" id="project-card__gh--3" class="text-white">GITHUB: Back</a>
 		                        <a href="https://late-night-bytes.herokuapp.com/" class="btn btn--white">FIND FOOD</a>
 		                    </div>
 		                </div>
 
 		            </div>
 		        </div>
-
 		        <!--  HERE'S WHERE YOU WANT THE DOWNLOAD RESUME BUTTON<a > -->
-
 	        </div>
 
 		</div>
 	</section>
 
 
-	<div id="contact">
+	<div id="contact" class="contact">
 
 		<h1 class="contact__heading">CONTACT</h1>
 
@@ -223,7 +215,7 @@
 	</div>
 
 	<div class="footer">
-		<h4 class="footer__text">&copy; 2019 CLAYTON S. SMITH</h4>
+		<h4 class="footer__text">&copy; 2019-2020 CLAYTON S. SMITH</h4>
 	</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

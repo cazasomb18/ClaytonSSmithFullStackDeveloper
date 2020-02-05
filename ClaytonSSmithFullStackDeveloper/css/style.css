@@ -1,8 +1,16 @@
 /* 
-0-600px:		Phone 
-600-900px: 		Tablet portrait
-900-1200px: 	Tablet landscape
+1200-900px: 	Tablet landscape
+899-600px: 		Tablet portrait
+<600px:			Phone 
 */
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
 
 html {
 	font-size: 62.5%;
@@ -11,57 +19,38 @@ html {
 	border-left: 1rem solid #fff;
 }
 
+	/* width < 1200-900px, 1 rem = 9px/9/16===56.25%*/
 	@media only screen and (max-width: 75em) {
     html {
-      font-size: 56.25%; } } /* width < 1200px, 1 rem = 9px/9/16===56.25%*/
+      font-size: 56.25%;} }
 
+	/*width 899-600px, 1rem = 8px/7/16===50%*/
     @media only screen and (max-width: 56.25em) {
 	html {
-		font-size: 50%; } } /*width < 900px, 1rem = 7px/7/16===50%*/
+		font-size: 50%; } } 
 
-	@media only screen and (max-width: 37.5em) {/*width < 600px, 1rem = 7px/16=43.75%*/
+	/*width < 600px, 1rem = 7px/16=43.75%*/
+	@media only screen and (max-width: 37.5em) {
 	html {
-		font-size: 43.75%; } }
-}
+		font-size: 43.75%; 
+		/*max-width: 100%;*/} }
 
 body {
 	box-sizing: border-box;
-	/*background-image: linear-gradient(to right bottom, #fff, #000);*/
-	max-width: 100%;
-	margin: 0 auto;
-	padding: 1rem 1rem 0 1rem;}
+	padding: 3rem;
+}
 
-	@media only screen and (max-width: 75em) {
+	/*@media only screen and (max-width: 75em) {
 	body {
 		padding: 0;
 		max-width: 100%; 
-	} }
+	} }*/
 
 	@media only screen and (max-width: 56.25em) {
 	body {
 		padding: 0;
-		max-width: 100%; 
 	} }
 
-	@media only screen and (max-width: 37.5em) {
-	body {
-		padding: 0;
-		max-width: 100%;  
-	} }
-
-body::before,
-body::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	width: 100%;
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
 
 h1 {
 	font-family: 'Montserrat Subrayada', sans-serif;
@@ -70,6 +59,11 @@ h1 {
 
 a {
 	text-decoration: none;
+}
+
+::selection {
+	background-color: crimson;
+	color: azure;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -119,11 +113,9 @@ a {
 }
 
 .navbar-header {
-	height: 95vh;
-	min-width: 96rem;
-	margin: 0 0 3rem 0;
+	width: 100%;
+	height: 100vh;
 	box-shadow: 0 1.5rem 4rem;
-	/*^^ isn't working^^*/
 
 	background-image: linear-gradient(to right bottom, 
 		rgba(15,32,39,.75), rgba(32,58,67,.75),
@@ -133,21 +125,28 @@ a {
 	background-size: cover;
 	background-position: top;
 	position: relative;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
 
 }
 
 #app-title {
-	font-size: 4rem;
+	font-size: 5rem;
 	color: rgba(242,156,80,1);
+	margin: 0 auto;
 }
 
 #navbar-container {
 	font-size: 1.6rem;
 }
 
+.nav-item {
+	display: flex;
+}
+
 .nav-link {
+	font-size: 2rem;
+	margin-left: 20rem;
 	color: #eee;
 }
 
@@ -157,8 +156,6 @@ a {
 }
 
 .header {
-	min-width: 96rem;
-	height: 37.4rem;
 	text-align: center;
 	padding: 1rem;
 }
@@ -166,7 +163,7 @@ a {
 .header__a {
 	overflow: hidden;
 	position: relative;
-	padding-bottom: 1rem;
+	padding-bottom: .5rem;
 }
 
 .headshotContainer {
@@ -177,13 +174,13 @@ a {
 	background-size: cover;
 	background-position: center;
 	margin: 0 auto;
-	opacity: .95;
+	margin-top: 3rem;
+	opacity: .9;
 	border-radius: 6px;
 }
 
 .headshotContainer:hover {
 	border: 1px solid rgba(255,255,255,.6);
-	overflow: hidden;
 	opacity: 1;
 }
 
@@ -195,12 +192,10 @@ a {
 	font-family: 'Montserrat', sans-serif;
 }
 
-.aboutMe-container {
-	padding-bottom: -5rem;
-}
 
 .aboutMe {
-	height: 28.8rem;
+	height: 100vh;
+	margin: 5rem 0 5rem 0;
 	background-image: linear-gradient(to right bottom, 
 		rgba(15,32,39,.75), rgba(32,58,67,.75),
 		rgba(44,83,100,.75)), 
@@ -210,11 +205,10 @@ a {
 	background-position: top;
 
 	position: relative;
-	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
-	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
+	-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 80vh);
+	clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 77vh);
 
 	padding-top: 6rem;
-	margin-bottom: -25rem;
 }
 
 .aboutMe-title {
@@ -225,7 +219,7 @@ a {
 }
 
 .aboutMe-title:hover {
-	transform: skewX(-10deg) skewY(-1deg) scale(1.1);
+	transform: skewX(14deg) skewY(1deg) scale(1.1) rotateX(15deg);
 	transition: all .2s;
 }
 
@@ -240,7 +234,6 @@ a {
 }
 
 .card-group-container {
-	padding: 30rem 0 10rem 0;
 	text-align: center;
 	transform: translateY(-3rem);
 }
@@ -249,11 +242,11 @@ a {
 	font-size: 6rem;
 	text-align: center;
 	color: rgba(242,156,80,1);
-	margin-top: -2rem;
+	margin-top: 2rem;
 }
 
 .portfolio-title:hover {
-	transform: skewX(-10deg) skewY(-1deg) scale(1.1);
+	transform: skewX(14deg) skewY(1deg) scale(1.1) rotateX(15deg);
 	transition: all .2s;
 }
 
@@ -278,8 +271,8 @@ a {
 .row {
 	min-width: 100rem;
 	margin: auto;
-/*	display: relative;
-	overflow: hidden;*/
+	position: relative;
+	overflow: hidden;
 }
 
 .row::after {
@@ -302,12 +295,13 @@ a {
 }
 
 #portfolio {
-	height: 110vh;
-	min-width: 96rem;
+	height: 100%;
 	font-family: 'Montserrat', sans-serif;
 }
 
 .project-card {
+	position: relative;
+	overflow: hidden;
 	perspective: 150rem;
 	-moz-perspective: 150rem;
 	position: relative;
@@ -320,7 +314,7 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 101%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	border-radius: 3px;
@@ -334,6 +328,7 @@ a {
 
 .project-card__side--back {
 	transform: rotateY(180deg);
+	width: 103%;
 }
 
 .project-card__side--back-1 {
@@ -365,20 +360,22 @@ a {
 	color: #eee;
 	position: absolute;
 	top: 12rem;
-	right: 2rem;
+	right: 1rem;
 	width: 60%;
 }
 
 .project-card__heading--1 {
 	line-height: 3.5rem;
-	font-size: 2.5rem;
-	right: 3rem;
+	font-size: 2.6rem;
+	right: 2rem;
 }
 
 .project-card__heading-span {
 	padding: 1rem 0;
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
+	display: relative;
+	overflow: hidden;
 }
 
 .project-card__heading-span--1 {
@@ -401,6 +398,8 @@ a {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
+	display: relative;
+	overflow: hidden;
 }
 
 .project-card__picture--1 {
@@ -419,19 +418,19 @@ a {
 }
 
 .project-card__details {
-	padding: .5rem;
+	padding: 1rem;
 }
 
-.project-card__details-ul {
+.project-card__details ul {
 	list-style: none;
 	width: 90%;
-	margin-left: -2rem;
-	padding-top: 1.5rem;
+	margin-left: 2rem;
 }
 
-.project-card__details-li {
+.project-card__details li {
 	text-align: left;
 	font-size: 1.2rem;
+	padding: 1rem;
 }
 
 .project-card__details li:not(:last-child) {
@@ -481,250 +480,15 @@ a {
 	color: #eee;
 }
 
-/*TAB LAND MEDIA QUERY*/
-@media only screen and (max-width: 75em), only screen and (hover: none) {
-
-	.card-group-container {
-		margin: 2rem 0;
-	}
-
-	.card-group {
-		align-content: start;
-		margin: 3rem 0;
-		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-	}
-
-	.project-card {
-    	position: relative;
-	  	overflow: hidden;
-    	margin: 4rem 0;
-    	height: auto;
-	  	border-radius: 3px;
-	  	background-color: #fff;
-	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  	}
-
-  	.project-card__side {
-	    -webkit-backface-visibility: initial;
-		backface-visibility: initial;
-	    height: auto;
-	    position: relative;
-	    overflow: hidden;
-	    box-shadow: none;
-	    position: relative;
-	  	overflow: hidden;
-	}
-
-	.project-card__details-ul {
-		margin-bottom: -2rem;
-	}
-
-	.project-card__details-ul--1 {
-		margin-bottom: -1rem;
-		margin-top: -2rem;
-	}
-
-	.project-card__side--back {
-		transform: rotateY(0);
-		-webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
-		clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
-		position: relative;
-		overflow: hidden;
-		top: -5rem;
-	}
-
-	.project-card:hover .card__side--front {
-        transform: rotateY(0); 
-    }
-
-  	.project-card__details-ul {
-        padding-left: 2rem; 
-    }
-
-  	.project-card__cta {
-	    display: flex;
-	    flex-direction: column;
-	    align-content: flex-end;
-	    width: 100%;
-	    position: relative;
-	    top: 0;
-	    left: 0;
-	}
-
-    .project-card__info-box {
-        margin: -3rem 0;
-    }
-
-    .project-card__gh {
-        font-size: 2.5rem; 
-    }
-
-    .project-card__gh--3 {
-    	font-size: 2.2rem; 
-    }
-
-    .project-card__back-title {
-    	display: none; 
-    }
-
-    .project-card__back-title--1 {
-    	display: none; 
-    }
-    .btn--white {
-    	align-self: center; 
-    }
+#project-card__gh--3 {
+	font-size: 2.5rem;
+	font-weight: 100;
+	text-decoration: none;
 }
-
-/*TAB PORT MEDIA QUERY*/
-@media only screen and (max-width: 56.25em), only screen and (hover: none) {
-	.nav-container {
-		display: flex;
-		justify-content: center;
-	}
-
-	.card-group-container {
-		margin: 2rem 0;
-		padding: 2rem 0; 
-	}
-
-	.card-group {
-		align-content: start;
-		margin: 4rem 0;
-		margin-top: 3rem;
-		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-	}
-
-    .project-card {
-    	position: relative;
-	  	overflow: hidden;
-    	margin: 4rem 0;
-    	height: 52rem;
-	  	border-radius: 3px;
-	  	background-color: #fff;
-	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
-	}
-
-    .project-card__side {
-    	position: relative;
-	    overflow: hidden;
-	    -webkit-backface-visibility: initial;
-		backface-visibility: initial;
-	    height: auto;
-	    box-shadow: none;
-	}
-
-	.project-card__details-ul--1 {
-		margin-bottom: 0;
-		margin-top: 0;
-	}
-
-	.project-card__details-ul {
-		margin-bottom: 0;
-		margin-left: .5rem;
-	}
-
-    .project-card__side--back {
-		transform: rotateY(0);
-		-webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
-		clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
-		overflow: hidden; 
-	}
-
-	.project-card__side--back-1 {
-		transform: translateY(-9.5rem); 
-	}
-
-	.project-card__side--back-2 {
-		transform: translateY(-2rem); 
-	}
-
-	.project-card__side--back-3 {
-		transform: translateY(-0.75rem);
-	}
-
-  	.project-card:hover .card__side--front {
-        transform: rotateY(0); 
-    }
-
-  	.project-card__cta {
-	    display: flex;
-	    flex-direction: column;
-	    align-content: flex-end;
-	    width: 100%;
-	    position: relative;
-	    top: 0;
-	    left: 0;
-	    transform: translateY(-1rem);
-	}
-
-    .project-card__info-box {
-        margin: -3rem 0;
-    }
-
-    .project-card__gh {
-        font-size: 2.5rem; 
-    }
-
-    .project-card__gh--3 {
-    	font-size: 2.2rem; 
-    }
-
-    .project-card__back-title {
-    	display: none; 
-    }
-
-    .project-card__back-title--1 {
-    	display: none; 
-    }
-
-    .btn--white {
-    	align-self: center; 
-    }
-
-    .text-white {
-    	letter-spacing: 1.5px;
-    }
-}
-
-
-/*PHONE MEDIA QUERY*/
-@media only screen and (max-width: 37.5em), only screen and (hover: none) {
-
-	.navbar-header {
-		padding-bottom: 6rem;
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90vh);
-	}
-
-	.aboutMe {
-		margin: 2rem 0;
-		padding: 2rem 0;
-	}
-
-	.project-card__info-box {
-        margin-bottom: 7.5rem;
-    }
-
-    .project-card__side--back-1 {
-    	top: 15rem;
-    }
-
-	.project-card__side--back-2 {
-		top: 4.75rem;
-	}
-
-	.project-card__side--back-3 {
-		top: 3rem;
-	}
-}
-
 
 #contact {
 	background-color: rgba(14,14,14,.6);
 	min-width: 96rem;
-	height: 75vh;
 	text-align: center;
 	color: rgba(242,156,80,1);
 	padding: 5rem 0;
@@ -749,11 +513,12 @@ a {
 }
 
 .contact__heading:hover{
-	transform: skewX(-10deg) skewY(-1deg) scale(1.1);
+	transform: skewX(14deg) skewY(1deg) scale(1.1) rotateX(15deg);
 	transition: all .2s;
 }
 
 .infoLinks {
+	padding: 1rem 0;
 	flex-direction: column;
 	justify-content: center;
 	font-family: 'Montserrat', sans-serif;
@@ -770,13 +535,17 @@ a {
 }
 
 .infoLinks:hover {
-	text-decoration: none;
+	/*text-decoration: none;*/
 	color: #fff;
 	transform: translateY(-.5rem);
 	transform: scale(1.1);
 	letter-spacing: 2.5px;
 	font-weight: 500;
 	box-shadow: 0 2rem 5rem rgba(0,0,0,.3);
+}
+
+.infoLinks__a:hover {
+	text-decoration: none;
 }
 
 .infoLinks__icon {
@@ -788,10 +557,490 @@ a {
 
 .footer {
 	display: flex;
-	min-width: 96rem;
 }
 
 .footer__text {
 	margin: 3rem auto;
-	font-size: 1.8rem;
+	font-size: 2rem;
+}
+
+/*TAB LAND MEDIA QUERY*/
+@media only screen and (max-width: 75em), only screen and (hover: none) {
+
+	.navbar-brand {
+	}
+
+	#navbar-header {
+		font-size: 5rem;
+		height: 120vh;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 105vh);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 105vh);
+	}
+
+	.navbar-header {
+		box-shadow: none;
+	}
+
+	.nav-item {
+		display: flex;
+	}
+
+	.nav-link {
+		margin: 0 auto;
+	}
+
+	.header__a {
+		font-size: 3rem;
+	}
+
+	.headshotContainer {
+		margin-top: 2rem;
+		height: 45rem;
+		width: 45rem;
+		opacity: 1;
+	}
+
+	#about {
+		height: 100vh;
+	}
+
+	.aboutMe {
+		/*height: 100vh;*/
+	}
+
+	.aboutMe-content {
+		position: relative;
+		top: 3rem;
+	}
+
+	.aboutMe-title {
+		font-size: 7rem;
+	}
+
+	.aboutMe-text {
+		font-size: 2.3rem;
+		padding-top: 2rem;
+	}
+
+	.portfolio-title {
+		font-size: 7rem;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	#portfolio {
+		height: 150vh;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.card-group {
+		-webkit-clip-path: polygon(0 0, 100% 18vh, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 18vh, 100% 100%, 0 100%);
+/*		position: relative;
+		overflow: hidden;*/
+	}
+
+
+	.project-card {
+		height: 80rem;
+	  	border-radius: 3px;
+	  	background-color: #fff;
+	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+/*		position: relative;
+		overflow: hidden;*/
+  	}
+
+  	.project-card__side {
+	    -webkit-backface-visibility: initial;
+		backface-visibility: initial;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.project-card__side--back {
+		position: relative;
+		width: 101%;
+		height: 26.5%;
+		justify-content: center;
+		-webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+		transform: rotateY(0) translateY(-1rem);
+	}
+
+    .project-card__side--back-3 {
+    	width: 101%;
+    	height: 27%;
+    	transform: rotateY(0) translateY(-1.5rem);
+
+    }
+
+	.project-card__side--front {
+        height: 75%;
+        transform: rotateY(0);
+    }
+
+    .project-card__heading-span {
+    	font-size: 3.5rem;
+    	line-height: 3.5rem;
+    	padding: 0;
+    }
+
+    .project-card__heading--1 {
+    	right: 4.5rem;
+    }
+
+    .project-card__heading {
+    	line-height: 2.5rem;
+		font-size: 5rem;
+		transform: translateY(-4.5rem);
+    }
+
+    .project-card__heading-span {
+    	font-size: 3.5rem;
+    }
+
+    .project-card__details {
+    	transform: translateY(-2.5rem);
+    }
+
+    .project-card__details li {
+    	font-size: 2rem;
+    }
+
+  	.project-card__cta {
+	    display: flex;
+	    flex-direction: column;
+	}
+
+    .project-card__gh {
+        font-size: 3rem; 
+        margin-bottom: 1rem;
+    }
+
+    #project-card__gh--3 {
+    	transform: translateY(-1.5rem);
+    	margin-bottom: -.5rem;
+    }
+
+    .project-card__back-title {
+    	display: none; 
+    }
+
+    .project-card__back-title--1 {
+    	display: none; 
+    }
+
+    .btn--white {
+    	align-self: center;
+    	margin-bottom: 1rem;
+    }
+
+    .infoLinks {
+    	line-height: 3rem;
+    	padding: 2rem;
+    }
+
+    .infoLinks__a {
+    	line-height: 2.5rem;
+    	margin: .5rem 0;
+    }
+
+    .contact-heading {
+    	font-size: 7rem;
+    }
+
+    .footer__text {
+    	font-size: 2.5rem;
+    }
+}
+
+/*TAB PORT MEDIA QUERY*/
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+
+	#app-title {
+		font-size: 4.5rem;
+	}
+
+	#navbar-header {
+		height: 80vh;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65vh);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65vh);
+	}
+
+	.navbar-header {
+		margin: 0;
+		padding: 0;
+		box-shadow: none;
+	}
+
+	.nav-item {
+		font-size: 3rem;
+		margin-left: 2rem;
+	}
+
+	.headshotContainer {
+		transform: translateY(5rem);
+		margin-top: 0;
+		padding: 0;
+	}
+
+	#about {
+		height: 75vh;
+	}
+
+	.aboutMe {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 57vh);
+		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 57vh);
+	}
+
+	.aboutMe-title {
+		padding-top: 0;
+	}
+
+	.aboutMe-content {
+		transform: translateY(12rem);
+		height: 100%;
+	}
+
+	.aboutMe-text {
+		font-size: 3rem;
+		letter-spacing: 2px;
+		line-height: 3.5rem;
+	}
+
+	#portfolio {
+		height: 177vh;
+	}
+
+	.portfolio-title {
+		margin-bottom: 5rem;
+	}
+
+	.card-group-container {
+		height: fill;
+		display: flex;
+	}
+
+	.card-group {
+		height: fill;
+		display: flex;
+		padding-top: 15rem;
+		padding: 20rem 0;
+		margin: 3rem 0;
+	}
+
+	.row {
+		height: 150vh;
+		display: flex;
+		flex-direction: row;
+		overflow: hidden;
+	}
+
+	.col-1-of-3 {
+		height: 33%;
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.project-card {
+		height: 95%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		/*overflow: hidden;*/
+		border-radius: 5px;
+	}
+
+	.project-card__heading {
+		/*font-size: 6rem;*/
+		/*line-height: 6.5rem;*/
+		top: 5rem;
+	}
+
+	.project-card__heading--1 {
+		right: 1rem;
+	}
+
+	.project-card__heading-span {
+		font-size: 6rem;
+		line-height: 6.5rem;
+	}
+
+	.project-card__side {
+		position: absolute;
+		overflow: hidden;
+	}
+
+	.project-card__side--front {
+		position: absolute;
+		overflow: hidden;
+        height: 80%;
+        align-self: flex-start;
+        /**/
+    }
+
+    .project-card__details {
+/*    	overflow: hidden;*/
+    	padding: 0rem;
+    }
+
+	.project-card__details li {
+		font-size: 2.7rem;
+	}
+
+	.project-card__side--back {
+		position: relative;
+		/*height: 30%;*/
+		align-self: flex-end;
+		transform: translateY(1rem);
+		overflow: hidden;
+	}
+
+	.project-card__side--back-2 {
+		transform: translateY(8.5rem);
+	}
+
+	.project-card__side--back-3 {
+		transform: translateY(6.5rem);
+	}
+
+	.project-card__info-box {
+		visibility: hidden;
+	}
+
+	.project-card__cta {
+		display: flex;
+		height: 50%;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.project-card__side--back-1 {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.project-card__gh {
+		font-size: 4.5rem;
+		top: -1rem;
+	}
+
+	#project-card__gh--3 {
+		margin-top: 4rem;
+		line-height: 3.7rem;
+		font-size: 3.7rem;
+	}
+
+	.btn--white {
+		transform: translateY(1rem);
+		line-height: 4rem !important;
+		font-size: 3.5rem !important;
+	}
+
+
+	.text-white {
+		font-size: 3rem;
+	}
+
+	#contact {
+		margin-top: 12rem;
+	}
+
+	.contact__heading {
+		margin: 0;
+	}
+
+	.text-white {
+		font-size: 2.2rem;
+		line-height: 2rem;
+	}
+}
+
+
+/*PHONE MEDIA QUERY*/
+@media only screen and (max-width: 37.5em), only screen and (hover: none) {
+
+	html {
+		min-width: 680px;
+	}
+
+	#app-title {
+		font-size: 4rem;
+	}
+
+	.navbar-header {
+		height: 90vh;
+		padding-bottom: 6rem;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
+	}
+
+	#about {
+		height: 90vh;
+	}
+
+	.aboutMe {
+		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 75vh);
+		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 75vh);
+		margin: 1rem 0;
+		padding: 3rem 0;
+	}
+
+	.row {
+		height: 150vh;
+	}
+
+	#portfolio {
+		height: 181vh;
+	}
+
+	.card-group {
+		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
+	}
+
+	.project-card {
+		height: 95%;
+	}
+
+	.project-card__side--front {
+		height: 90%;
+	}
+
+	.project-card__picture {
+		top: -3rem;
+		height: 35%;
+		width: 100%;
+	}
+
+	.project-card__heading-span--1 {
+		top: -2rem;
+	}
+
+	.project-card__info-box {
+        margin-bottom: 7.5rem;
+    }
+
+    .project-card__side--back {
+    	height: 17%;
+    	top: -7.5rem;
+    }
+
+	.project-card__side--back-3 {
+		height: 25%;
+		top: -6.5rem;
+	}
+
+	#project-card__gh--3 {
+		margin-top: 3rem;
+		line-height: 3.7rem;
+		font-size: 3.7rem;
+	}
+
+	.btn-white {
+		margin-bottom: 1rem;
+	}
 }
