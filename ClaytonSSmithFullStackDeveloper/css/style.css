@@ -328,7 +328,6 @@ a {
 
 .project-card__side--back {
 	transform: rotateY(180deg);
-	width: 103%;
 }
 
 .project-card__side--back-1 {
@@ -637,8 +636,8 @@ a {
 	.card-group {
 		-webkit-clip-path: polygon(0 0, 100% 18vh, 100% 100%, 0 100%);
 		clip-path: polygon(0 0, 100% 18vh, 100% 100%, 0 100%);
-/*		position: relative;
-		overflow: hidden;*/
+		position: relative;
+		overflow: hidden;
 	}
 
 
@@ -855,8 +854,6 @@ a {
 	}
 
 	.project-card__heading {
-		/*font-size: 6rem;*/
-		/*line-height: 6.5rem;*/
 		top: 5rem;
 	}
 
@@ -879,7 +876,6 @@ a {
 		overflow: hidden;
         height: 80%;
         align-self: flex-start;
-        /**/
     }
 
     .project-card__details {
@@ -893,7 +889,6 @@ a {
 
 	.project-card__side--back {
 		position: relative;
-		/*height: 30%;*/
 		align-self: flex-end;
 		transform: translateY(1rem);
 		overflow: hidden;
@@ -979,31 +974,46 @@ a {
 	}
 
 	#about {
-		height: 90vh;
+		height: 100vh;
 	}
 
 	.aboutMe {
-		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 75vh);
-		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 75vh);
+		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
+		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 85vh);
 		margin: 1rem 0;
 		padding: 3rem 0;
 	}
 
-	.row {
-		height: 150vh;
+	.aboutMe-title {
+		font-size: 8rem;
 	}
 
 	#portfolio {
 		height: 181vh;
 	}
 
+	.portfolio-title {
+		font-size: 8rem;
+		margin: 0;
+	}
+
 	.card-group {
+		display: flex;
 		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
 		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
 	}
 
+	.row {
+		display: flex;
+	}
+
+	.col-1-of-3 {
+		padding: 5rem 0;
+		margin: 0 auto;
+	}
+
 	.project-card {
-		height: 95%;
+		height: 45vh;
 	}
 
 	.project-card__side--front {
@@ -1012,35 +1022,62 @@ a {
 
 	.project-card__picture {
 		top: -3rem;
-		height: 35%;
-		width: 100%;
+		height: 30%;
+		width: stretch;
 	}
 
 	.project-card__heading-span--1 {
 		top: -2rem;
 	}
 
-	.project-card__info-box {
-        margin-bottom: 7.5rem;
-    }
-
     .project-card__side--back {
     	height: 17%;
-    	top: -7.5rem;
+    	top: -8.5rem;
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+		justify-content: space-between;
     }
+
+    #project-card__back--1 {
+    	align-self: flex-end;
+    	transform: translateY(8.5rem);
+    }
+
+    .project-card__details {
+    	display: flex;
+    	padding: 0;
+    }
+
+    .project-card__details ul {
+    	margin-left: 0;
+    	width: 100%;
+    	justify-content: center;
+    }
+
+    .project-card__details li {
+    	font-size: 3rem;
+    	text-align: justify;
+		text-justify: inter-word;
+    }
+
+    .project-card__details li:not(:last-child) {
+		border-bottom: none;
+	}
 
 	.project-card__side--back-3 {
 		height: 25%;
-		top: -6.5rem;
+		top: -5.5rem;
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 	}
 
 	#project-card__gh--3 {
 		margin-top: 3rem;
-		line-height: 3.7rem;
+		line-height: 2.5rem;
 		font-size: 3.7rem;
 	}
 
-	.btn-white {
-		margin-bottom: 1rem;
+	.contact__heading {
+		font-size: 8rem;
 	}
 }
