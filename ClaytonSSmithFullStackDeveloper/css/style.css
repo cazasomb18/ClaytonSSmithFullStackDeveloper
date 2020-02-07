@@ -62,8 +62,8 @@ a {
 }
 
 ::selection {
-	background-color: crimson;
-	color: azure;
+	background-color: rgb(242,156,80);
+	color: rgb(32,58,67);
 }
 
 .btn, .btn:link, .btn:visited {
@@ -304,7 +304,6 @@ a {
 	overflow: hidden;
 	perspective: 150rem;
 	-moz-perspective: 150rem;
-	position: relative;
 	height: 54rem;
 }
 
@@ -479,7 +478,7 @@ a {
 	color: #eee;
 }
 
-#project-card__gh--3 {
+.project-card__gh--3 {
 	font-size: 2.5rem;
 	font-weight: 100;
 	text-decoration: none;
@@ -603,9 +602,9 @@ a {
 		height: 100vh;
 	}
 
-	.aboutMe {
-		/*height: 100vh;*/
-	}
+	/*.aboutMe {
+		height: 100vh;
+	}*/
 
 	.aboutMe-content {
 		position: relative;
@@ -644,10 +643,7 @@ a {
 	.project-card {
 		height: 80rem;
 	  	border-radius: 3px;
-	  	background-color: #fff;
 	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-/*		position: relative;
-		overflow: hidden;*/
   	}
 
   	.project-card__side {
@@ -659,7 +655,7 @@ a {
 
 	.project-card__side--back {
 		position: relative;
-		width: 101%;
+		width: 103%;
 		height: 26.5%;
 		justify-content: center;
 		-webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
@@ -668,9 +664,9 @@ a {
 	}
 
     .project-card__side--back-3 {
-    	width: 101%;
-    	height: 27%;
-    	transform: rotateY(0) translateY(-1.5rem);
+    	/*width: 103%;
+    	height: 27%;*/
+    	/*transform: rotateY(0) translateY(-1.5rem);*/
 
     }
 
@@ -717,7 +713,7 @@ a {
         margin-bottom: 1rem;
     }
 
-    #project-card__gh--3 {
+    .project-card__gh--3 {
     	transform: translateY(-1.5rem);
     	margin-bottom: -.5rem;
     }
@@ -813,16 +809,17 @@ a {
 	}
 
 	.portfolio-title {
-		margin-bottom: 5rem;
+		font-size: 7rem;
+		margin: 0;
 	}
 
 	.card-group-container {
-		height: fill;
 		display: flex;
+		height: 100%;
 	}
 
 	.card-group {
-		height: fill;
+		height: 165vh;
 		display: flex;
 		padding-top: 15rem;
 		padding: 20rem 0;
@@ -830,35 +827,34 @@ a {
 	}
 
 	.row {
-		height: 150vh;
+		height: 165vh;
 		display: flex;
 		flex-direction: row;
 		overflow: hidden;
+		margin: 0 auto;
 	}
 
 	.col-1-of-3 {
+		float: none;
 		height: 33%;
 		width: 90%;
-		margin: 0 auto;
+		margin: 0;
 		position: relative;
 		overflow: hidden;
 	}
 
 	.project-card {
-		height: 95%;
+		height: 100%;
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
-		/*overflow: hidden;*/
+		justify-content: flex-start;
 		border-radius: 5px;
 	}
 
 	.project-card__heading {
-		top: 5rem;
-	}
-
-	.project-card__heading--1 {
-		right: 1rem;
+		top: 6rem;
+		right: 2rem;
+		line-height: 5rem;
 	}
 
 	.project-card__heading-span {
@@ -879,7 +875,12 @@ a {
     }
 
     .project-card__details {
-/*    	overflow: hidden;*/
+    	display: flex;
+    	height: 100%;
+    	transform: translateY(-27rem);
+    	position: relative;
+    	overflow: hidden;
+    	margin: 0 0 auto;
     	padding: 0rem;
     }
 
@@ -892,14 +893,8 @@ a {
 		align-self: flex-end;
 		transform: translateY(1rem);
 		overflow: hidden;
-	}
-
-	.project-card__side--back-2 {
-		transform: translateY(8.5rem);
-	}
-
-	.project-card__side--back-3 {
-		transform: translateY(6.5rem);
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
 	}
 
 	.project-card__info-box {
@@ -910,7 +905,7 @@ a {
 		display: flex;
 		height: 50%;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	.project-card__side--back-1 {
@@ -919,18 +914,18 @@ a {
 	}
 
 	.project-card__gh {
+		/*top: -.5rem;*/
 		font-size: 4.5rem;
-		top: -1rem;
 	}
 
-	#project-card__gh--3 {
-		margin-top: 4rem;
-		line-height: 3.7rem;
-		font-size: 3.7rem;
+	.project-card__gh--3 {
+		transform: translateY(1rem);
+		margin-bottom: 0;
+		line-height: 5.5rem;
 	}
 
 	.btn--white {
-		transform: translateY(1rem);
+		transform: translateY(1.5rem);
 		line-height: 4rem !important;
 		font-size: 3.5rem !important;
 	}
@@ -989,89 +984,123 @@ a {
 	}
 
 	#portfolio {
-		height: 181vh;
+		display: flex;
+		flex-flow: row-wrap;
+		justify-content: center;
+		height: 210vh;
 	}
 
 	.portfolio-title {
 		font-size: 8rem;
-		margin: 0;
+		margin-bottom: 2rem;
 	}
 
 	.card-group {
+		height: 220vh;
 		display: flex;
 		-webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
 		clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 100%);
-	}
-
-	.row {
-		display: flex;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 
 	.col-1-of-3 {
+		height: 55vh;
 		padding: 5rem 0;
 		margin: 0 auto;
 	}
 
 	.project-card {
-		height: 45vh;
+		height: 55vh;
 	}
 
 	.project-card__side--front {
-		height: 90%;
+		height: 40vh;
 	}
 
 	.project-card__picture {
-		top: -3rem;
-		height: 30%;
-		width: stretch;
+		top: -2rem;
+		height: 25%;
+		width: 101%;
 	}
 
-	.project-card__heading-span--1 {
-		top: -2rem;
+	.project-card__heading-span {
+		font-size: 4.5rem;
+		line-height: 3.9rem;
 	}
 
     .project-card__side--back {
-    	height: 17%;
-    	top: -8.5rem;
+    	height: 15vh;
+    	top: -12rem;
+    	width: 105%;
 		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 3vh, 100% 0%, 100% 100%, 0% 100%);
 		justify-content: space-between;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
     }
 
     #project-card__back--1 {
     	align-self: flex-end;
-    	transform: translateY(8.5rem);
+    	transform: translateY(8rem);
     }
 
     .project-card__details {
+    	height: 100%;
     	display: flex;
+    	justify-content: center;
     	padding: 0;
+    	transform: translateY(-1rem);
     }
 
     .project-card__details ul {
+    	height: min-content;
     	margin-left: 0;
-    	width: 100%;
-    	justify-content: center;
+    	width: 95%;
     }
 
     .project-card__details li {
     	font-size: 3rem;
     	text-align: justify;
 		text-justify: inter-word;
+		line-height: 3.5rem;
     }
 
-    .project-card__details li:not(:last-child) {
-		border-bottom: none;
+	.project-card__side__front-3 {
+		height: 50rem;
 	}
 
 	.project-card__side--back-3 {
-		height: 25%;
-		top: -5.5rem;
+		width: 101%;
+		height: 30%;
+		top: -12rem;
 		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 3vh, 100% 0%, 100% 100%, 0% 100%);
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
 	}
 
-	#project-card__gh--3 {
+	/*
+	CLASSES belonging to this element:
+		.project-card__side
+		.project-card__side--back
+		.project-card__side--back-3
+	PARENT:
+		.project-card
+	SIBLING:
+		.project-card__side
+		.project-card__side--front
+		.project-card__side--front-3;
+			**all the same element with these 3 classes.
+			**project-card__side--front-3 refers to this specific position.
+	CHILDREN: 
+		.project-card__info-box;
+		#project-card__gh--3 .project-card__gh;
+		.project-card__cta;
+		.btn .btn--white;
+	*/
+
+	.project-card__gh--3 {
 		margin-top: 3rem;
 		line-height: 2.5rem;
 		font-size: 3.7rem;
