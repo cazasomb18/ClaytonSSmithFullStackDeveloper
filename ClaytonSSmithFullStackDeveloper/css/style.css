@@ -313,7 +313,8 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 101%;
+	width: 100%;
+	/*101%*/
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	border-radius: 3px;
@@ -565,9 +566,6 @@ a {
 /*TAB LAND MEDIA QUERY*/
 @media only screen and (max-width: 75em), only screen and (hover: none) {
 
-	.navbar-brand {
-	}
-
 	#navbar-header {
 		font-size: 5rem;
 		height: 120vh;
@@ -601,10 +599,6 @@ a {
 	#about {
 		height: 100vh;
 	}
-
-	/*.aboutMe {
-		height: 100vh;
-	}*/
 
 	.aboutMe-content {
 		position: relative;
@@ -641,7 +635,8 @@ a {
 
 
 	.project-card {
-		height: 80rem;
+		background-color: #fff;
+		height: 100%;
 	  	border-radius: 3px;
 	  	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   	}
@@ -655,7 +650,8 @@ a {
 
 	.project-card__side--back {
 		position: relative;
-		width: 103%;
+		width: 100%;
+		/*103*/
 		height: 26.5%;
 		justify-content: center;
 		-webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
@@ -754,7 +750,7 @@ a {
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
 
 	#app-title {
-		font-size: 4.5rem;
+		font-size: 5rem;
 	}
 
 	#navbar-header {
@@ -790,6 +786,7 @@ a {
 	}
 
 	.aboutMe-title {
+		font-size: 8rem;
 		padding-top: 0;
 	}
 
@@ -809,7 +806,7 @@ a {
 	}
 
 	.portfolio-title {
-		font-size: 7rem;
+		font-size: 8rem;
 		margin: 0;
 	}
 
@@ -848,7 +845,9 @@ a {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
+		align-items: center;
 		border-radius: 5px;
+		overflow: hidden;
 	}
 
 	.project-card__heading {
@@ -885,16 +884,17 @@ a {
     }
 
 	.project-card__details li {
-		font-size: 2.7rem;
+		font-size: 3.5rem !important;
 	}
 
 	.project-card__side--back {
 		position: relative;
-		align-self: flex-end;
-		transform: translateY(1rem);
 		overflow: hidden;
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
+		align-items: flex-end;
+		align-self: flex-end;
+		transform: translateY(7rem);
 	}
 
 	.project-card__info-box {
@@ -940,6 +940,7 @@ a {
 	}
 
 	.contact__heading {
+		font-size: 8rem;
 		margin: 0;
 	}
 
@@ -1021,18 +1022,20 @@ a {
 	.project-card__picture {
 		top: -2rem;
 		height: 25%;
-		width: 101%;
+		width: 100%;
+		/*101%*/
 	}
 
 	.project-card__heading-span {
-		font-size: 4.5rem;
+		font-size: 5rem;
 		line-height: 3.9rem;
 	}
 
     .project-card__side--back {
     	height: 15vh;
     	top: -12rem;
-    	width: 105%;
+    	width: 100%;
+    	/*105%*/
 		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 		clip-path: polygon(0% 3vh, 100% 0%, 100% 100%, 0% 100%);
 		justify-content: space-between;
@@ -1071,7 +1074,8 @@ a {
 	}
 
 	.project-card__side--back-3 {
-		width: 101%;
+		width: 100%;
+		/*101%*/
 		height: 30%;
 		top: -12rem;
 		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -1079,26 +1083,6 @@ a {
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
 	}
-
-	/*
-	CLASSES belonging to this element:
-		.project-card__side
-		.project-card__side--back
-		.project-card__side--back-3
-	PARENT:
-		.project-card
-	SIBLING:
-		.project-card__side
-		.project-card__side--front
-		.project-card__side--front-3;
-			**all the same element with these 3 classes.
-			**project-card__side--front-3 refers to this specific position.
-	CHILDREN: 
-		.project-card__info-box;
-		#project-card__gh--3 .project-card__gh;
-		.project-card__cta;
-		.btn .btn--white;
-	*/
 
 	.project-card__gh--3 {
 		margin-top: 3rem;
